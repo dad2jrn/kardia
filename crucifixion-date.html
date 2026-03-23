@@ -111,12 +111,65 @@
   }
 
   /* TAB NAV */
+  .tab-nav-wrap {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .tab-toggle {
+    display: none;
+  }
   .tab-nav {
     display: flex;
     justify-content: center;
     gap: 0;
-    margin-bottom: 40px;
     border-bottom: 2px solid var(--gold);
+  }
+  @media (max-width: 639px) {
+    .tab-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background: rgba(184,134,11,0.08);
+      border: 1px solid var(--gold);
+      border-bottom: none;
+      color: var(--gold-bright);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      cursor: pointer;
+    }
+    .tab-toggle-arrow { transition: transform 0.2s; }
+    .tab-nav-wrap.tab-open .tab-toggle-arrow { transform: rotate(180deg); }
+    .tab-nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(10, 7, 2, 0.98);
+      border: 1px solid var(--gold);
+      border-top: none;
+      justify-content: flex-start;
+    }
+    .tab-nav-wrap.tab-open .tab-nav { display: flex; }
+    .tab-btn {
+      border: none;
+      border-bottom: 1px solid rgba(184,134,11,0.2);
+      white-space: normal;
+      text-align: left;
+      padding: 12px 16px;
+      width: 100%;
+    }
+    .tab-btn.active {
+      margin-bottom: 0;
+      border-color: transparent;
+      border-bottom: 1px solid rgba(184,134,11,0.2);
+    }
   }
 
   .tab-btn {
@@ -635,12 +688,18 @@
       When did Jesus of Nazareth die? Two dates dominate scholarly and theological debate: 30 CE and 33 CE. Both are defended by serious historians and exegetes. This inquiry marshals the full weight of the Scriptural record, Greco-Roman history, astronomical data, and Jewish sources — then scores each position on a weighted matrix to render a verdict.
     </div>
 
-    <div class="tab-nav">
-      <button class="tab-btn active" onclick="showTab('debate')">The Debate</button>
-      <button class="tab-btn" onclick="showTab('tensions')">Key Tensions</button>
-      <button class="tab-btn" onclick="showTab('scoring')">Scoring Matrix</button>
-      <button class="tab-btn" onclick="showTab('sources')">Sources</button>
-      <button class="tab-btn" onclick="showTab('faq')">FAQ</button>
+    <div class="tab-nav-wrap">
+      <button class="tab-toggle" onclick="this.closest('.tab-nav-wrap').classList.toggle('tab-open')" aria-label="Select section">
+        <span class="tab-toggle-label">The Debate</span>
+        <span class="tab-toggle-arrow">▾</span>
+      </button>
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="showTab('debate', this)">The Debate</button>
+        <button class="tab-btn" onclick="showTab('tensions', this)">Key Tensions</button>
+        <button class="tab-btn" onclick="showTab('scoring', this)">Scoring Matrix</button>
+        <button class="tab-btn" onclick="showTab('sources', this)">Sources</button>
+        <button class="tab-btn" onclick="showTab('faq', this)">FAQ</button>
+      </div>
     </div>
 
     <!-- DEBATE TAB -->
@@ -1347,11 +1406,15 @@ function toggleFaq(qEl) {
   }
 }
 
-function showTab(id) {
+function showTab(id, btn) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + id).classList.add('active');
-  event.target.classList.add('active');
+  if (btn) btn.classList.add('active');
+  var wrap = document.querySelector('.tab-nav-wrap');
+  if (wrap) wrap.classList.remove('tab-open');
+  var label = document.querySelector('.tab-toggle-label');
+  if (label && btn) label.textContent = btn.textContent;
 }
 
 function switchFramework(fw) {

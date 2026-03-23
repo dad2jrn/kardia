@@ -857,6 +857,60 @@
     outline: none;
   }
 
+  /* ── TAB DROPDOWN TOGGLE (mobile only) ───────────── */
+  .tab-toggle {
+    display: none;
+  }
+
+  @media (max-width: 639px) {
+    .tab-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background: rgba(184,134,11,0.08);
+      border: 1px solid var(--gold);
+      border-bottom: none;
+      color: var(--gold-bright);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      cursor: pointer;
+    }
+    .tab-toggle-arrow { transition: transform 0.2s; }
+    .tab-nav-wrap.tab-open .tab-toggle-arrow { transform: rotate(180deg); }
+    .tab-nav-wrap::after { display: none; }
+    .tab-nav {
+      display: none;
+      overflow-x: visible;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(10, 7, 2, 0.98);
+      border: 1px solid var(--gold);
+      border-top: none;
+    }
+    .tab-nav-wrap.tab-open .tab-nav { display: flex; }
+    .tab-btn {
+      border: none;
+      border-bottom: 1px solid rgba(184,134,11,0.2);
+      white-space: normal;
+      text-align: left;
+      padding: 12px 16px;
+      width: 100%;
+    }
+    .tab-btn.active {
+      margin-bottom: 0;
+      border-color: transparent;
+      border-bottom: 1px solid rgba(184,134,11,0.2);
+    }
+  }
+
   /* ── TABLET BREAKPOINT (640px+) ──────────────────── */
   @media (min-width: 640px) {
     header { padding: 50px 20px 36px; }
@@ -987,6 +1041,10 @@
 
     <!-- TAB NAV -->
     <div class="tab-nav-wrap">
+      <button class="tab-toggle" onclick="this.closest('.tab-nav-wrap').classList.toggle('tab-open')" aria-label="Select section">
+        <span class="tab-toggle-label">1 The Question</span>
+        <span class="tab-toggle-arrow">▾</span>
+      </button>
       <div class="tab-nav">
         <button class="tab-btn active" onclick="showTab('s1', this)">1 The Question</button>
         <button class="tab-btn" onclick="showTab('s2', this)">2 The Week</button>
@@ -1902,9 +1960,12 @@ function showTab(id, btn) {
   document.getElementById('tab-' + id).classList.add('active');
   if (btn) {
     btn.classList.add('active');
-    // Scroll the active tab button into view on mobile
     btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
   }
+  var wrap = document.querySelector('.tab-nav-wrap');
+  if (wrap) wrap.classList.remove('tab-open');
+  var label = document.querySelector('.tab-toggle-label');
+  if (label && btn) label.textContent = btn.textContent;
   window.scrollTo({ top: 0, behavior: 'instant' });
   setTimeout(function() { window.scrollTo({ top: 0, behavior: 'instant' }); }, 50);
 }
