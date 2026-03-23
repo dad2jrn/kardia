@@ -1,21 +1,19 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import articles from '../data/articles'
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  ...articles.map(a => ({ href: a.href, label: a.navLabel })),
+  { to: '/', label: 'Home', external: false },
+  ...articles.map(a => ({ to: a.href, label: a.navLabel, external: !a.isRoute })),
 ]
 
-interface Props {
-  activePath?: string
-}
-
-export default function SiteNav({ activePath = '/' }: Props) {
+export default function SiteNav() {
   const [open, setOpen] = useState(false)
+  const { pathname } = useLocation()
 
   return (
     <nav className={`site-nav${open ? ' nav-open' : ''}`}>
-      <a href="/" className="nav-brand">Kardia</a>
+      <Link to="/" className="nav-brand" onClick={() => setOpen(false)}>Kardia</Link>
       <button
         className="nav-toggle"
         onClick={() => setOpen(o => !o)}
@@ -25,13 +23,18 @@ export default function SiteNav({ activePath = '/' }: Props) {
       </button>
       <ul className="nav-links">
         {navLinks.map(link => (
-          <li key={link.href}>
-            <a
-              href={link.href}
-              className={activePath === link.href ? 'active' : undefined}
-            >
-              {link.label}
-            </a>
+          <li key={link.to}>
+            {link.external ? (
+              <a href={link.to}>{link.label}</a>
+            ) : (
+              <Link
+                to={link.to}
+                className={pathname === link.to ? 'active' : undefined}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>

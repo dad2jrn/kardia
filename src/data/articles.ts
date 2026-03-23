@@ -2,6 +2,7 @@ export interface Article {
   id: string
   order: number
   href: string
+  isRoute: boolean
   navLabel: string
   label: string
   title: string
@@ -13,6 +14,7 @@ const articles: Article[] = [
     id: 'holy-week',
     order: 1,
     href: '/holy-week.html',
+    isRoute: false,
     navLabel: 'The Week',
     label: 'Biblical & Historical Study',
     title: 'The Week God Has Been Writing All Along',
@@ -22,7 +24,8 @@ const articles: Article[] = [
   {
     id: 'crucifixion-date',
     order: 2,
-    href: '/crucifixion-date.html',
+    href: '/crucifixion-date',
+    isRoute: true,
     navLabel: 'Year of the Cross',
     label: 'Chronological Inquiry',
     title: 'The Year of the Cross: 30 CE vs 33 CE',

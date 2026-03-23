@@ -6,7 +6,7 @@ import articles from '../data/articles'
 export default function Home() {
   return (
     <div className="page-bg">
-      <SiteNav activePath="/" />
+      <SiteNav />
       <Hero />
       <div className="articles">
         {articles.map(article => (
