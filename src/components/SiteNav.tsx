@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/crucifixion-date.html', label: 'Year of the Cross' },
@@ -9,9 +11,18 @@ interface Props {
 }
 
 export default function SiteNav({ activePath = '/' }: Props) {
+  const [open, setOpen] = useState(false)
+
   return (
-    <nav className="site-nav">
+    <nav className={`site-nav${open ? ' nav-open' : ''}`}>
       <a href="/" className="nav-brand">Kardia</a>
+      <button
+        className="nav-toggle"
+        onClick={() => setOpen(o => !o)}
+        aria-label="Toggle menu"
+      >
+        &#9776;
+      </button>
       <ul className="nav-links">
         {navLinks.map(link => (
           <li key={link.href}>
