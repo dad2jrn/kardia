@@ -574,10 +574,37 @@
   .site-nav .nav-links a.active {
     color: var(--gold-bright);
   }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    color: var(--gold-bright);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
   @media (max-width: 600px) {
-    .site-nav { flex-direction: column; gap: 8px; text-align: center; }
-    .site-nav .nav-links { gap: 16px; }
-    .site-nav .nav-links a { font-size: 0.72rem; }
+    .nav-toggle { display: block; }
+    .site-nav { position: relative; flex-wrap: wrap; }
+    .site-nav .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(10, 7, 2, 0.98);
+      border-bottom: 1px solid var(--gold);
+      padding: 8px 0;
+      gap: 0;
+    }
+    .site-nav.nav-open .nav-links { display: flex; }
+    .site-nav .nav-links a {
+      display: block;
+      padding: 12px 24px;
+      font-size: 0.82rem;
+    }
   }
 </style>
 </head>
@@ -586,6 +613,7 @@
 
   <nav class="site-nav">
     <a href="index.html" class="nav-brand">Kardia</a>
+    <button class="nav-toggle" onclick="this.closest('.site-nav').classList.toggle('nav-open')" aria-label="Toggle menu">&#9776;</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="crucifixion-date.html" class="active">Year of the Cross</a></li>
