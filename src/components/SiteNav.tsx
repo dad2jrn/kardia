@@ -1,9 +1,9 @@
 import { useState } from 'react'
+import articles from '../data/articles'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/crucifixion-date.html', label: 'Year of the Cross' },
-  { href: '/holy-week.html', label: 'The Week' },
+  ...articles.map(a => ({ href: a.href, label: a.navLabel })),
 ]
 
 interface Props {
