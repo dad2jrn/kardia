@@ -30,7 +30,10 @@ export default function HolyWeek() {
 
   function nextTab() {
     const idx = tabs.findIndex(t => t.id === activeTab)
-    if (idx < tabs.length - 1) setActiveTab(tabs[idx + 1].id)
+    if (idx < tabs.length - 1) {
+      setActiveTab(tabs[idx + 1].id)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
   }
 
   return (
