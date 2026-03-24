@@ -13,7 +13,7 @@ export default function Home() {
       <div className="articles">
         <div className="article-first-wrap">
           <div className="start-here-annotation">
-            <img src="/start-here.png" alt="Start here!" className="start-here-img" />
+            <img src="/public/start-here.png" alt="Start here!" className="start-here-img" />
           </div>
           <ArticleCard key={first.id} {...first} />
         </div>
