@@ -159,10 +159,15 @@ body {
 
 .start-here-annotation {
   position: absolute;
-  top: -84px;
-  right: -6px;
+  top: -100px;
+  right: -10px;
   pointer-events: none;
   user-select: none;
+}
+
+.start-here-img {
+  width: 180px;
+  display: block;
 }
 
 @media (max-width: 600px) {
