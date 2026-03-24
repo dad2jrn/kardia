@@ -149,7 +149,24 @@ body {
   gap: 32px;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px 80px;
+  padding: 88px 20px 80px;
+  align-items: start;
+}
+
+.article-first-wrap {
+  position: relative;
+}
+
+.start-here-annotation {
+  position: absolute;
+  top: -84px;
+  right: -6px;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .start-here-annotation { display: none; }
 }
 .article-card {
   background: linear-gradient(160deg, #1e1208 0%, #120c04 100%);
