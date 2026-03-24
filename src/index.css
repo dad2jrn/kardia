@@ -159,8 +159,8 @@ body {
 
 .start-here-annotation {
   position: absolute;
-  top: -50px;
-  right: -10px;
+  top: -60px;
+  right: 12px;
   pointer-events: none;
   user-select: none;
 }
