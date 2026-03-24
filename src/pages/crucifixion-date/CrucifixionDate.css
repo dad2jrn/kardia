@@ -12,12 +12,12 @@
 }
 
 /* ── PAGE HEADER ──────────────────────────────────── */
-.page-header {
+.crucifixion-page .page-header {
   text-align: center;
   padding: 60px 20px 40px;
 }
 
-.header-ornament {
+.crucifixion-page .header-ornament {
   color: var(--gold);
   font-size: 1rem;
   letter-spacing: 0.5em;
@@ -34,7 +34,7 @@
   margin-bottom: 8px;
 }
 
-.subtitle {
+.crucifixion-page .subtitle {
   color: var(--parchment-dark);
   font-size: clamp(0.85rem, 2vw, 1.1rem);
   letter-spacing: 0.2em;
@@ -42,14 +42,14 @@
   margin-bottom: 30px;
 }
 
-.divider-gold {
+.crucifixion-page .divider-gold {
   width: 200px;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
   margin: 0 auto 12px;
 }
 
-.divider-thin {
+.crucifixion-page .divider-thin {
   width: 120px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
@@ -73,23 +73,23 @@
 }
 
 /* ── TAB NAV ──────────────────────────────────────── */
-.tab-nav-wrap {
+.crucifixion-page .tab-nav-wrap {
   position: relative;
   margin-bottom: 40px;
 }
 
-.tab-toggle {
+.crucifixion-page .tab-toggle {
   display: none;
 }
 
-.tab-nav {
+.crucifixion-page .tab-nav {
   display: flex;
   justify-content: center;
   gap: 0;
   border-bottom: 2px solid var(--gold);
 }
 
-.tab-btn {
+.crucifixion-page .tab-btn {
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   padding: 12px 28px;
@@ -102,9 +102,9 @@
   text-transform: uppercase;
 }
 
-.tab-btn:hover { color: var(--gold-light); }
+.crucifixion-page .tab-btn:hover { color: var(--gold-light); }
 
-.tab-btn.active {
+.crucifixion-page .tab-btn.active {
   color: var(--gold-bright);
   background: rgba(184,134,11,0.12);
   border-color: var(--gold);
@@ -113,7 +113,7 @@
 }
 
 @media (max-width: 639px) {
-  .tab-toggle {
+  .crucifixion-page .tab-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,10 +129,10 @@
     cursor: pointer;
   }
 
-  .tab-toggle-arrow { transition: transform 0.2s; }
-  .tab-nav-wrap.tab-open .tab-toggle-arrow { transform: rotate(180deg); }
+  .crucifixion-page .tab-toggle-arrow { transition: transform 0.2s; }
+  .crucifixion-page .tab-nav-wrap.tab-open .tab-toggle-arrow { transform: rotate(180deg); }
 
-  .tab-nav {
+  .crucifixion-page .tab-nav {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -146,9 +146,9 @@
     justify-content: flex-start;
   }
 
-  .tab-nav-wrap.tab-open .tab-nav { display: flex; }
+  .crucifixion-page .tab-nav-wrap.tab-open .tab-nav { display: flex; }
 
-  .tab-btn {
+  .crucifixion-page .tab-btn {
     border: none;
     border-bottom: 1px solid rgba(184,134,11,0.2);
     white-space: normal;
@@ -157,7 +157,7 @@
     width: 100%;
   }
 
-  .tab-btn.active {
+  .crucifixion-page .tab-btn.active {
     margin-bottom: 0;
     border-color: transparent;
     border-bottom: 1px solid rgba(184,134,11,0.2);
@@ -243,7 +243,7 @@
   color: var(--stone);
 }
 
-.cross-divider {
+.crucifixion-page .cross-divider {
   text-align: center;
   color: var(--gold);
   font-size: 1.2rem;
@@ -578,7 +578,7 @@
 }
 
 /* ── FAQ TAB ──────────────────────────────────────── */
-.faq-item {
+.crucifixion-page .faq-item {
   border: 1px solid rgba(184,134,11,0.25);
   border-radius: 4px;
   margin-bottom: 12px;
@@ -586,7 +586,7 @@
   box-shadow: 0 2px 12px rgba(0,0,0,0.3);
 }
 
-.faq-q {
+.crucifixion-page .faq-q {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -602,29 +602,29 @@
   user-select: none;
 }
 
-.faq-q:hover {
+.crucifixion-page .faq-q:hover {
   background: linear-gradient(135deg, rgba(40,28,12,0.98), rgba(26,18,10,0.98));
   color: var(--gold-light);
 }
 
-.faq-q.open {
+.crucifixion-page .faq-q.open {
   background: linear-gradient(135deg, rgba(50,34,10,0.98), rgba(30,20,5,0.98));
   color: var(--gold-bright);
   border-bottom: 1px solid rgba(184,134,11,0.3);
 }
 
-.faq-arrow {
+.crucifixion-page .faq-arrow {
   font-size: 0.65rem;
   color: var(--gold);
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
-.faq-q.open .faq-arrow {
+.crucifixion-page .faq-q.open .faq-arrow {
   transform: rotate(180deg);
 }
 
-.faq-a {
+.crucifixion-page .faq-a {
   padding: 20px 24px 22px;
   background: linear-gradient(135deg, var(--parchment) 0%, var(--parchment-dark) 100%);
   font-size: 0.97rem;

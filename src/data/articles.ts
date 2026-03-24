@@ -13,8 +13,8 @@ const articles: Article[] = [
   {
     id: 'holy-week',
     order: 1,
-    href: '/holy-week.html',
-    isRoute: false,
+    href: '/holy-week',
+    isRoute: true,
     navLabel: 'The Week',
     label: 'Biblical & Historical Study',
     title: 'The Week God Has Been Writing All Along',

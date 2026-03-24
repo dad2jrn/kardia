@@ -1,7 +1,15 @@
 import { useState } from 'react'
-import { faqItems } from '../data/faq'
 
-export default function FaqTab() {
+export interface FaqItem {
+  question: string
+  answer: string
+}
+
+interface Props {
+  items: FaqItem[]
+}
+
+export default function FaqAccordion({ items }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   function toggle(i: number) {
@@ -10,7 +18,7 @@ export default function FaqTab() {
 
   return (
     <>
-      {faqItems.map((item, i) => {
+      {items.map((item, i) => {
         const isOpen = openIndex === i
         return (
           <div key={i} className="faq-item">

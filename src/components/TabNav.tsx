@@ -1,25 +1,21 @@
 import { useState } from 'react'
 
-const tabs = [
-  { id: 'debate', label: 'The Debate' },
-  { id: 'tensions', label: 'Key Tensions' },
-  { id: 'scoring', label: 'Scoring Matrix' },
-  { id: 'sources', label: 'Sources' },
-  { id: 'faq', label: 'FAQ' },
-] as const
-
-export type TabId = typeof tabs[number]['id']
-
-interface Props {
-  active: TabId
-  onChange: (id: TabId) => void
+export interface TabDef {
+  id: string
+  label: string
 }
 
-export default function TabNav({ active, onChange }: Props) {
+interface Props {
+  tabs: TabDef[]
+  active: string
+  onChange: (id: string) => void
+}
+
+export default function TabNav({ tabs, active, onChange }: Props) {
   const [open, setOpen] = useState(false)
   const activeLabel = tabs.find(t => t.id === active)?.label ?? ''
 
-  function select(id: TabId) {
+  function select(id: string) {
     onChange(id)
     setOpen(false)
   }
