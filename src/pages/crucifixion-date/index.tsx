@@ -3,12 +3,11 @@ import './CrucifixionDate.css'
 import SiteNav from '../../components/SiteNav'
 import PageHeader from '../../components/PageHeader'
 import TabNav from '../../components/TabNav'
-import Accordion from '../../components/Accordion'
 import DebateTab from './tabs/DebateTab'
 import KeyTensionsTab from './tabs/KeyTensionsTab'
 import ScoringTab from './tabs/ScoringTab'
 import SourcesTab from './tabs/SourcesTab'
-import { faqItems } from './data/faq'
+import FaqSection from './tabs/FaqSection'
 
 const tabs = [
   { id: 'debate', label: 'The Debate' },
@@ -38,11 +37,7 @@ export default function CrucifixionDate() {
         {activeTab === 'tensions' && <KeyTensionsTab />}
         {activeTab === 'scoring' && <ScoringTab />}
         {activeTab === 'sources' && <SourcesTab />}
-        {activeTab === 'faq' && (
-          <div className="cd-faq-card">
-            <Accordion items={faqItems} />
-          </div>
-        )}
+        {activeTab === 'faq' && <FaqSection />}
       </div>
     </div>
   )
