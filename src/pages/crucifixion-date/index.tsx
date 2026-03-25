@@ -3,7 +3,7 @@ import './CrucifixionDate.css'
 import SiteNav from '../../components/SiteNav'
 import PageHeader from '../../components/PageHeader'
 import TabNav from '../../components/TabNav'
-import FaqAccordion from '../../components/FaqAccordion'
+import Accordion from '../../components/Accordion'
 import DebateTab from './tabs/DebateTab'
 import KeyTensionsTab from './tabs/KeyTensionsTab'
 import ScoringTab from './tabs/ScoringTab'
@@ -38,7 +38,7 @@ export default function CrucifixionDate() {
         {activeTab === 'tensions' && <KeyTensionsTab />}
         {activeTab === 'scoring' && <ScoringTab />}
         {activeTab === 'sources' && <SourcesTab />}
-        {activeTab === 'faq' && <FaqAccordion items={faqItems} />}
+        {activeTab === 'faq' && <Accordion items={faqItems} />}
       </div>
     </div>
   )

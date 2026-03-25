@@ -1,5 +1,5 @@
 import { SectionCard, CrossDivider, ClosingBox } from '../components'
-import FaqAccordion from '../../../components/FaqAccordion'
+import Accordion from '../../../components/Accordion'
 import { appendixItems } from '../data/appendix'
 
 export default function Appendix() {
@@ -7,7 +7,7 @@ export default function Appendix() {
     <SectionCard num="✦" title="Appendix: Key Texts Re-examined">
       <p className="ia-body-p">Each of the following texts is commonly cited in defense of the traditional demonology. Each is examined here in light of the four pillars and shown to require a different — and more exegetically honest — reading.</p>
 
-      <FaqAccordion items={appendixItems} />
+      <Accordion items={appendixItems} />
 
       <CrossDivider />
 

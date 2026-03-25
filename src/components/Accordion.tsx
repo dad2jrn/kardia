@@ -9,7 +9,7 @@ interface Props {
   items: FaqItem[]
 }
 
-export default function FaqAccordion({ items }: Props) {
+export default function Accordion({ items }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   function toggle(i: number) {
@@ -30,7 +30,7 @@ export default function FaqAccordion({ items }: Props) {
               <span className="faq-arrow">▾</span>
             </div>
             {isOpen && (
-              <div className="faq-a open" dangerouslySetInnerHTML={{ __html: item.answer }} />
+              <div className="faq-a" dangerouslySetInnerHTML={{ __html: item.answer }} />
             )}
           </div>
         )

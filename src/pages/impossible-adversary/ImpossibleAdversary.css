@@ -537,63 +537,6 @@
   outline: none;
 }
 
-/* ── FAQ ACCORDION (appendix) ─────────────────────────── */
-.impossible-adversary-page .faq-item {
-  border-bottom: 1px solid rgba(184,134,11,0.2);
-}
-
-.impossible-adversary-page .faq-item:last-of-type { border-bottom: none; }
-
-.impossible-adversary-page .faq-q {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(0.8rem, 2.1vw, 0.92rem);
-  letter-spacing: 0.03em;
-  color: var(--ink);
-  font-weight: 600;
-  padding: 18px 12px 14px 0;
-  cursor: pointer;
-  line-height: 1.5;
-  display: flex;
-  align-items: flex-start;
-  gap: 4px;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-.impossible-adversary-page .faq-arrow {
-  margin-left: auto;
-  padding-left: 14px;
-  color: var(--gold);
-  font-size: 1rem;
-  flex-shrink: 0;
-  transition: transform 0.25s;
-}
-
-.impossible-adversary-page .faq-q.open .faq-arrow { transform: rotate(180deg); }
-
-.impossible-adversary-page .faq-a {
-  padding: 0 4px 18px 0;
-}
-
-.impossible-adversary-page .faq-a p {
-  font-size: clamp(0.93rem, 2.1vw, 1rem);
-  line-height: 1.82;
-  color: var(--ink-light);
-  margin-bottom: 12px;
-}
-
-.impossible-adversary-page .faq-a p:last-of-type { margin-bottom: 10px; }
-
-.ia-faq-scripture {
-  font-size: clamp(0.78rem, 1.8vw, 0.85rem);
-  font-style: italic;
-  color: var(--stone);
-  border-left: 3px solid rgba(184,134,11,0.4);
-  padding-left: 12px;
-  margin-top: 10px;
-  line-height: 1.7;
-}
 
 /* ── FAQ SECTION ACCORDION ────────────────────────────── */
 .ia-faq-intro { margin-bottom: 20px; }
@@ -710,52 +653,6 @@
   white-space: nowrap;
 }
 
-.ia-faq-item {
-  border-bottom: 1px solid rgba(184,134,11,0.2);
-}
-
-.ia-faq-item:last-of-type { border-bottom: none; }
-
-.ia-faq-q {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(0.8rem, 2.1vw, 0.92rem);
-  letter-spacing: 0.03em;
-  color: var(--ink);
-  font-weight: 600;
-  padding: 18px 12px 14px 0;
-  cursor: pointer;
-  line-height: 1.5;
-  display: flex;
-  align-items: flex-start;
-  gap: 4px;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-.ia-faq-arrow {
-  margin-left: auto;
-  padding-left: 14px;
-  color: var(--gold);
-  font-size: 1rem;
-  flex-shrink: 0;
-  transition: transform 0.25s;
-}
-
-.ia-faq-q.open .ia-faq-arrow { transform: rotate(180deg); }
-
-.ia-faq-a {
-  padding: 0 4px 18px 0;
-}
-
-.ia-faq-a p {
-  font-size: clamp(0.93rem, 2.1vw, 1rem);
-  line-height: 1.82;
-  color: var(--ink-light);
-  margin-bottom: 12px;
-}
-
-.ia-faq-a p:last-of-type { margin-bottom: 10px; }
 
 /* ── RESPONSIVE ───────────────────────────────────────── */
 @media (min-width: 640px) {

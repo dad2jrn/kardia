@@ -1,4 +1,4 @@
-import type { FaqItem } from '../../../components/FaqAccordion'
+import type { FaqItem } from '../../../components/Accordion'
 
 export const faqItems: FaqItem[] = [
   {

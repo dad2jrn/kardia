@@ -1,5 +1,5 @@
 import { SectionCard, CrossDivider, ClosingBox } from '../components'
-import FaqAccordion from '../../../components/FaqAccordion'
+import Accordion from '../../../components/Accordion'
 import { faqItems } from '../data/faq'
 
 export default function FaqSection() {
@@ -7,7 +7,7 @@ export default function FaqSection() {
     <SectionCard num="?" title="Frequently Asked Questions">
       <p className="hw-body-p hw-faq-intro">These are the questions most commonly raised by everyday Christians encountering this framework for the first time. Each answer is grounded in Scripture and historical record.</p>
 
-      <FaqAccordion items={faqItems} />
+      <Accordion items={faqItems} />
 
       <CrossDivider />
 
