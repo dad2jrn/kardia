@@ -253,6 +253,7 @@ body {
 
 .faq-a {
   padding: 0 4px 18px 0;
+  color: var(--ink-light);
 }
 
 .faq-a p {
