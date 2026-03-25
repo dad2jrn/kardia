@@ -48,7 +48,7 @@
 
 .impossible-adversary-page .tab-btn {
   font-family: 'Cinzel', serif;
-  font-size: clamp(0.58rem, 1.4vw, 0.68rem);
+  font-size: clamp(0.78rem, 1.4vw, 0.68rem);
   letter-spacing: 0.06em;
   padding: 10px clamp(8px, 1.6vw, 13px);
   background: transparent;
