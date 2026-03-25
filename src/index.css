@@ -215,3 +215,51 @@ body {
   color: var(--gold);
   margin-top: 4px;
 }
+
+/* ── PAGE HEADER (shared across all pages) ───────────── */
+.page-header {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.header-ornament {
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.page-header h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.6rem, 5vw, 3.2rem);
+  color: var(--gold-light);
+  line-height: 1.2;
+  text-shadow: 0 0 40px rgba(184,134,11,0.4), 0 2px 8px rgba(0,0,0,0.8);
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.page-header .subtitle {
+  color: var(--parchment-dark);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  letter-spacing: 0.15em;
+  opacity: 0.75;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.page-header .divider-gold {
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 12px;
+}
+
+.page-header .divider-thin {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  margin: 0 auto;
+}

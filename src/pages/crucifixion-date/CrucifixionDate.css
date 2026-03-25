@@ -11,50 +11,6 @@
   padding: 0 20px;
 }
 
-/* ── PAGE HEADER ──────────────────────────────────── */
-.crucifixion-page .page-header {
-  text-align: center;
-  padding: 60px 20px 40px;
-}
-
-.crucifixion-page .header-ornament {
-  color: var(--gold);
-  font-size: 1rem;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  opacity: 0.8;
-  margin-bottom: 16px;
-}
-
-.crucifixion-page h1 {
-  font-size: clamp(1.8rem, 5vw, 3.2rem);
-  color: var(--gold-light);
-  line-height: 1.2;
-  text-shadow: 0 0 40px rgba(184,134,11,0.4), 0 2px 8px rgba(0,0,0,0.8);
-  margin-bottom: 8px;
-}
-
-.crucifixion-page .subtitle {
-  color: var(--parchment-dark);
-  font-size: clamp(0.85rem, 2vw, 1.1rem);
-  letter-spacing: 0.2em;
-  opacity: 0.75;
-  margin-bottom: 30px;
-}
-
-.crucifixion-page .divider-gold {
-  width: 200px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 0 auto 12px;
-}
-
-.crucifixion-page .divider-thin {
-  width: 120px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
-  margin: 0 auto;
-}
 
 /* ── INTRO CARD ───────────────────────────────────── */
 .intro-card {

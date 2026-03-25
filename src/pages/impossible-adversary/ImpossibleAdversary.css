@@ -12,6 +12,7 @@
   padding: 0 16px;
 }
 
+
 /* ── INTRO CARD ───────────────────────────────────────── */
 .ia-intro-card {
   background: linear-gradient(135deg, var(--parchment) 0%, var(--parchment-dark) 100%);
