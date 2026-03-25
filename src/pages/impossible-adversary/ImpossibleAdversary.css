@@ -615,32 +615,39 @@
   text-transform: uppercase;
   padding: 8px 14px;
   border-radius: 3px;
-  border: 1px solid rgba(184,134,11,0.25);
-  background: rgba(26,18,10,0.4);
-  color: var(--stone);
+  border: 1px solid rgba(26,18,10,0.35);
+  background: rgba(26,18,10,0.12);
+  color: var(--ink-light);
   cursor: pointer;
   transition: all 0.2s;
   -webkit-tap-highlight-color: transparent;
 }
 
-.ia-faq-cat-btn:hover { color: var(--gold-light); border-color: rgba(184,134,11,0.5); }
+.ia-faq-cat-btn:hover {
+  background: rgba(26,18,10,0.2);
+  border-color: rgba(26,18,10,0.5);
+  color: var(--ink);
+}
 
 .ia-faq-cat-btn--active-pastoral {
-  background: rgba(184,134,11,0.12);
+  background: rgba(184,134,11,0.18);
   border-color: var(--gold);
-  color: var(--gold-bright);
+  color: #7a5800;
+  font-weight: 600;
 }
 
 .ia-faq-cat-btn--active-clarity {
-  background: rgba(26,58,92,0.3);
-  border-color: var(--cobalt-light);
-  color: #7ec8e3;
+  background: rgba(26,58,92,0.18);
+  border-color: var(--cobalt);
+  color: #1a3a5c;
+  font-weight: 600;
 }
 
 .ia-faq-cat-btn--active-objection {
-  background: rgba(139,26,26,0.2);
-  border-color: var(--crimson-light);
-  color: #e87272;
+  background: rgba(139,26,26,0.15);
+  border-color: var(--crimson);
+  color: #8b1a1a;
+  font-weight: 600;
 }
 
 .ia-faq-cat-btn-count {
