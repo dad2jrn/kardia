@@ -48,9 +48,9 @@
 
 .impossible-adversary-page .tab-btn {
   font-family: 'Cinzel', serif;
-  font-size: clamp(0.62rem, 1.8vw, 0.75rem);
-  letter-spacing: 0.08em;
-  padding: 10px clamp(10px, 2.5vw, 18px);
+  font-size: clamp(0.58rem, 1.4vw, 0.68rem);
+  letter-spacing: 0.06em;
+  padding: 10px clamp(8px, 1.6vw, 13px);
   background: transparent;
   color: var(--stone);
   border: 1px solid transparent;
@@ -756,7 +756,7 @@
 }
 
 @media (min-width: 900px) {
-  .impossible-adversary-page .tab-nav { flex-wrap: wrap; overflow-x: visible; }
+  .impossible-adversary-page .tab-nav { flex-wrap: nowrap; overflow-x: auto; }
 }
 
 @media (max-width: 400px) {
