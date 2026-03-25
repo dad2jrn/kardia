@@ -38,7 +38,11 @@ export default function CrucifixionDate() {
         {activeTab === 'tensions' && <KeyTensionsTab />}
         {activeTab === 'scoring' && <ScoringTab />}
         {activeTab === 'sources' && <SourcesTab />}
-        {activeTab === 'faq' && <Accordion items={faqItems} />}
+        {activeTab === 'faq' && (
+          <div className="cd-faq-card">
+            <Accordion items={faqItems} />
+          </div>
+        )}
       </div>
     </div>
   )

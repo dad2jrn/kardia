@@ -533,3 +533,11 @@
   color: var(--ink-light);
 }
 
+/* ── FAQ TAB ───────────────────────────────────────── */
+.cd-faq-card {
+  background: linear-gradient(160deg, var(--parchment) 0%, var(--parchment-dark) 100%);
+  border-radius: 4px;
+  padding: 28px 32px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.5);
+}
+
