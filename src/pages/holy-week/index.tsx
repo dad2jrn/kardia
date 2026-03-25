@@ -45,6 +45,9 @@ export default function HolyWeek() {
         subtitle="A typological study of creation, prophecy, and time"
       />
       <div className="hw-container">
+        <div className="hw-intro-card">
+          What if every major event of the creation week — from the triumphal entry to the resurrection — was written into the structure of creation itself? This study traces the convergence of the seven-day creation pattern, the Hebrew festival calendar, and the prophetic imagery woven through Scripture, revealing a single week that the whole of redemptive history was building toward.
+        </div>
         <TabNav tabs={tabs} active={activeTab} onChange={setActiveTab} />
         {activeTab === 'I'    && <Section1 onNext={nextTab} />}
         {activeTab === 'II'   && <Section2 onNext={nextTab} />}
