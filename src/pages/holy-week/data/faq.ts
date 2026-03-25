@@ -2,7 +2,7 @@ import type { FaqItem } from '../../../components/Accordion'
 
 export const faqItems: FaqItem[] = [
   {
-    question: '1. \u00a0 Doesn\'t Jesus say "no one knows the day or the hour"? Isn\'t this study doing exactly what He told us not to do?',
+    question: 'Q: \u00a0 Doesn\'t Jesus say "no one knows the day or the hour"? Isn\'t this study doing exactly what He told us not to do?',
     answer: `<p>This is the first and most important question — and it deserves a careful answer.</p>
 <p>Jesus spoke those words to a first-century Jewish audience. As we covered in Section 6, the phrase "no one knows the day or the hour" was the idiomatic way Jewish people referred to Rosh Hashanah — the Feast of Trumpets — precisely because that feast could not be declared until two witnesses sighted the new moon. Jesus was not shutting down all calendrical awareness. He was almost certainly pointing His audience at the very feast on which He would return, using the feast's own traditional nickname as the pointer.</p>
 <p>More importantly, notice what He did not say. He did not say "no one knows the generation" or "no one knows the decade" or "no one knows the season." In fact, just a few verses later in Matthew 24:32–33, He commands His disciples to learn the lesson of the fig tree — when the branch becomes tender and puts out leaves, you know that summer is near. He then says: "When you see all these things, you know that it is near, right at the door." Jesus is explicitly telling us to read the signs and know the season.</p>
@@ -10,7 +10,7 @@ export const faqItems: FaqItem[] = [
 <div class="faq-scripture">Matthew 24:32–36 &nbsp;·&nbsp; 1 Thessalonians 5:4 — "But you, brothers and sisters, are not in darkness so that this day should surprise you like a thief."</div>`,
   },
   {
-    question: '2. \u00a0 People have been saying Jesus is coming back soon for two thousand years. What makes this time different?',
+    question: 'Q: \u00a0 People have been saying Jesus is coming back soon for two thousand years. What makes this time different?',
     answer: `<p>This is the scoffer's objection that Peter himself recorded in 2 Peter 3:4 — and it is a legitimate question. The answer is not that the signs are worse or more dramatic than before. The answer is about position in the gestational clock.</p>
 <p>Every previous generation that predicted imminent return was missing two critical prerequisites: Israel back in the land and Jerusalem under Jewish control. For roughly 1,900 years, no generation could point to those things. They were not present. They are now — 1948 and 1967 respectively.</p>
 <p>Beyond that, previous generations did not have a precisely grounded chronological framework to work from. The six-thousand-year framework, while known to the early church through Irenaeus and embedded in Sanhedrin 97a, was not being applied to a verified two-thousand-year interval from a historically dateable crucifixion. We now have the tools to do that with a level of precision unavailable to earlier generations.</p>
@@ -18,7 +18,7 @@ export const faqItems: FaqItem[] = [
 <div class="faq-scripture">2 Peter 3:3–4 &nbsp;·&nbsp; Ezekiel 37:21–22 &nbsp;·&nbsp; Luke 21:24 &nbsp;·&nbsp; Matthew 24:32–34</div>`,
   },
   {
-    question: '3. \u00a0 What happens if 2033 comes and goes and nothing happens? Does that disprove the Bible?',
+    question: 'Q: \u00a0 What happens if 2033 comes and goes and nothing happens? Does that disprove the Bible?',
     answer: `<p>No — and this question reveals why intellectual honesty about what this framework is and is not matters so much.</p>
 <p>This study presents a biblically grounded window of expectation, not a prophetic guarantee. The six-thousand-year framework is apostolic tradition — received and transmitted — not an explicit divine decree stamped with a fixed calendar date. If 2033 passes without the return of Christ, it does not disprove the Bible. It means either our chronological anchors contain an error we have not identified, or the framework is correct in its structure but slightly off in its calibration, or God's patience extends the window further.</p>
 <p>What it would not mean is that Scripture failed. The Bible has never given us a fixed calendar date for the return. What it has given us is a pattern, a framework, and signs — and the call to watch faithfully. That call remains valid regardless of the precise timing.</p>
@@ -26,14 +26,14 @@ export const faqItems: FaqItem[] = [
 <div class="faq-scripture">Matthew 24:36 &nbsp;·&nbsp; Acts 1:7 — "It is not for you to know the times or dates the Father has set by his own authority." &nbsp;·&nbsp; Matthew 25:13</div>`,
   },
   {
-    question: '4. \u00a0 What about the Rapture? Will Christians be taken before all of this?',
+    question: 'Q: \u00a0 What about the Rapture? Will Christians be taken before all of this?',
     answer: `<p>The pre-tribulation rapture — the idea that Christians will be secretly removed from the earth before a seven-year tribulation period — is a relatively modern theological position. It was not taught by the early church fathers. It was not part of the apostolic tradition transmitted through Irenaeus. It was developed primarily in the early 1800s through the teaching of John Nelson Darby and popularized in America through the Scofield Reference Bible in 1909.</p>
 <p>The biblical texts that describe the resurrection and gathering of believers at Christ's return — 1 Thessalonians 4:16–17, 1 Corinthians 15:51–52, Matthew 24:30–31 — consistently connect this event to the visible, trumpet-announced return of Christ, not a secret pre-tribulation removal. The "last trumpet" of 1 Corinthians 15:52 and the "trumpet call of God" of 1 Thessalonians 4:16 connect directly to the Feast of Trumpets framework developed in Section 6.</p>
 <p>This study does not require a pre-tribulation rapture to be valid. The framework stands on the six-thousand-year pattern and the feast calendar regardless of one's view on tribulation sequence. What the framework does support is that the return of Christ — visible, trumpet-announced, and preceded by the two witnesses of Revelation 11 — occurs within the 2030–2033 window.</p>
 <div class="faq-scripture">1 Thessalonians 4:16–17 &nbsp;·&nbsp; 1 Corinthians 15:51–52 &nbsp;·&nbsp; Matthew 24:30–31 &nbsp;·&nbsp; Revelation 11:15</div>`,
   },
   {
-    question: '5. \u00a0 The Bible says the world could end at any moment. How can you say there is a window?',
+    question: 'Q: \u00a0 The Bible says the world could end at any moment. How can you say there is a window?',
     answer: `<p>The idea that Christ could return at any random moment — sometimes called imminence — is often assumed to be the biblical position. But it is worth examining what Scripture actually says.</p>
 <p>Jesus gave His disciples a list of things that must happen before the end: the gospel preached to all nations (Matthew 24:14), the abomination of desolation standing in the holy place (Matthew 24:15), specific cosmic signs (Matthew 24:29), and Israel's prerequisite conditions being met. Paul told the Thessalonians that the Day of the Lord would not come until the apostasy occurs and the man of lawlessness is revealed (2 Thessalonians 2:3). These are not random — they are sequenced prerequisites.</p>
 <p>The passages that describe Christ coming "like a thief in the night" are almost always addressed to those who are not watching — not to the faithful who are awake and paying attention. Paul explicitly says in 1 Thessalonians 5:4 that the day will not surprise those who are in the light "like a thief." The thief metaphor applies to the unprepared. The prepared are watching and know the season.</p>
@@ -41,7 +41,7 @@ export const faqItems: FaqItem[] = [
 <div class="faq-scripture">Matthew 24:14, 29–33 &nbsp;·&nbsp; 2 Thessalonians 2:3 &nbsp;·&nbsp; 1 Thessalonians 5:2–4</div>`,
   },
   {
-    question: '6. \u00a0 Is the thousand years in Revelation 20 meant to be taken literally? Some say it is just symbolic.',
+    question: 'Q: \u00a0 Is the thousand years in Revelation 20 meant to be taken literally? Some say it is just symbolic.',
     answer: `<p>This is one of the genuine debates within Christian theology, and intellectual honesty requires acknowledging it rather than pretending it is settled.</p>
 <p>Three main positions exist. Premillennialism holds that the thousand years is a literal future reign of Christ on earth following His return — the position this study operates from. Amillennialism holds that the thousand years is a symbolic description of the current church age, with Christ reigning spiritually from heaven now. Postmillennialism holds that the church will gradually bring the world under the gospel before Christ returns to a spiritually transformed earth.</p>
 <p>The strongest case for a literal Millennium rests on several foundations. First, Irenaeus and the early church fathers who were closest to the apostolic source consistently taught a literal future reign. Second, Zechariah 14:16 explicitly describes the nations celebrating the Feast of Tabernacles during the Messianic reign — a concrete, calendrical, earthly activity. Third, Revelation 20 describes specific events — the binding of Satan, the reign of martyrs, the release of Satan, the final rebellion — that are extraordinarily difficult to read as metaphor for the present church age given the church's visible state.</p>
@@ -49,14 +49,14 @@ export const faqItems: FaqItem[] = [
 <div class="faq-scripture">Revelation 20:1–6 &nbsp;·&nbsp; Zechariah 14:16 &nbsp;·&nbsp; Hebrews 4:9 — "There remains, then, a Sabbath-rest for the people of God."</div>`,
   },
   {
-    question: '7. \u00a0 How do we know the six-thousand-year timeline is accurate? Couldn\'t the earth be much older — or the chronology be off?',
+    question: 'Q: \u00a0 How do we know the six-thousand-year timeline is accurate? Couldn\'t the earth be much older — or the chronology be off?',
     answer: `<p>This is a fair and important question. The six-thousand-year framework is based on the biblical chronologies in Genesis, which have been subject to significant scholarly debate. There are two main Hebrew text traditions — the Masoretic Text (which most English Bibles follow) and the Septuagint (the ancient Greek translation of the Old Testament used by most of the early church), and they produce different chronological totals for the pre-Flood patriarchs. The Masoretic Text yields roughly 6,000 years from Adam to the present. The Septuagint adds several centuries.</p>
 <p>What is important to understand is that the six-thousand-year framework does not require chronological precision down to the exact year. The early church fathers who held this framework — Irenaeus, Hippolytus, Lactantius — were working with the Septuagint and still held to the sixth-day / Sabbath structure as pointing toward a Messianic age following six millennia. The framework is structural, not a mathematical calculation that fails if a single number is off by fifty years.</p>
 <p>Additionally, this study anchors the final two-thousand-year interval not at Adam but at the crucifixion of Christ — a historically verifiable event dateable within a three-year window. That anchor is far more precise than Genesis chronologies, and it is the anchor that produces the 2030–2033 window regardless of how one resolves the pre-Flood chronology debate.</p>
 <div class="faq-scripture">Genesis 5 (Masoretic genealogies) &nbsp;·&nbsp; Matthew 1:17 (the three-epoch structure) &nbsp;·&nbsp; 2 Peter 3:8</div>`,
   },
   {
-    question: '8. \u00a0 What about the Antichrist and the Great Tribulation? Where do those fit?',
+    question: 'Q: \u00a0 What about the Antichrist and the Great Tribulation? Where do those fit?',
     answer: `<p>Scripture describes a period of intense global tribulation preceding the return of Christ. Jesus called it "great distress, unequaled from the beginning of the world until now" (Matthew 24:21). Daniel describes a final period associated with the "abomination that causes desolation" (Daniel 9:27, 12:11). Revelation describes a sequence of judgments — seals, trumpets, and bowls — culminating in the return of Christ at the seventh trumpet.</p>
 <p>The two witnesses of Revelation 11 prophesy for 1,260 days — approximately three and a half years — before their death and resurrection immediately precede the seventh trumpet. This places their ministry beginning roughly three and a half years before the Parousia. If the return is in the fall of 2033, the ministry of the two witnesses would begin around early 2030 — which notably overlaps with the earliest edge of the window established by the AD 30 crucifixion date.</p>
 <p>The Antichrist — described in Daniel as the "little horn" and in Revelation as the beast — is a figure who rises to prominence during this period and is destroyed at the return of Christ (2 Thessalonians 2:8). This study does not speculate about the identity of the Antichrist. What the framework establishes is the approximate timing of the window within which these events must occur and conclude.</p>
@@ -64,7 +64,7 @@ export const faqItems: FaqItem[] = [
 <div class="faq-scripture">Matthew 24:15–21 &nbsp;·&nbsp; Daniel 9:27 &nbsp;·&nbsp; Revelation 11:3–15 &nbsp;·&nbsp; 2 Thessalonians 2:3–8</div>`,
   },
   {
-    question: '9. \u00a0 My pastor has never taught any of this. Does that mean my church is wrong?',
+    question: 'Q: \u00a0 My pastor has never taught any of this. Does that mean my church is wrong?',
     answer: `<p>Not necessarily wrong — but likely operating within a tradition that has not engaged deeply with this material.</p>
 <p>The six-thousand-year framework, the Hebrew feast calendar typology, and the two-day — third-day prophetic pattern are not fringe ideas invented recently. They are present in the earliest layers of Christian teaching, in the Talmud, and woven through both testaments. The reason most pastors do not teach them is not that they are false but that the theological tradition most Western pastors were trained in — largely shaped by post-Reformation European thought — does not emphasize them.</p>
 <p>Seminary training in most traditions focuses on systematic theology organized around doctrinal categories rather than canonical narrative and Hebrew thought. The Greek philosophical framework that gradually influenced Christian theology from the second century onward tends to produce theology that is more concerned with the nature of God in abstract terms than with the purposes of God expressed in historical and chronological patterns.</p>
@@ -72,7 +72,7 @@ export const faqItems: FaqItem[] = [
 <div class="faq-scripture">Acts 17:11 — "The Berean Jews received the message with great eagerness and examined the Scriptures every day to see if what Paul said was true." &nbsp;·&nbsp; 1 Thessalonians 5:21 — "Test everything; hold fast to what is good."</div>`,
   },
   {
-    question: '10. \u00a0 Should I be stockpiling food, moving to the countryside, or making major life changes to prepare?',
+    question: 'Q: \u00a0 Should I be stockpiling food, moving to the countryside, or making major life changes to prepare?',
     answer: `<p>No — and the reason is rooted in the same character of God that grounds this entire study.</p>
 <p>The disciples asked Jesus a version of this question in Acts 1:6–8. They wanted to know if He was about to restore the kingdom to Israel. His answer was not a preparation checklist. It was: "You will receive power when the Holy Spirit comes on you; and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the ends of the earth." In other words: your job does not change based on the timing of the end. Your job is to be faithful, present, and fruitful with what you have been given — right where you are.</p>
 <p>The parable of the ten virgins (Matthew 25:1–13) illustrates the right kind of preparation. The wise virgins were not fleeing to caves with supplies. They were maintaining their lamps — their readiness, their faithfulness, their relationship with the bridegroom. When he arrived they were ready not because they had stockpiled resources but because they had not let their oil run dry.</p>
@@ -80,7 +80,7 @@ export const faqItems: FaqItem[] = [
 <div class="faq-scripture">Acts 1:6–8 &nbsp;·&nbsp; Matthew 25:1–13 &nbsp;·&nbsp; Luke 12:35–40 &nbsp;·&nbsp; 1 Peter 4:7 — "The end of all things is near. Therefore be alert and of sober mind so that you may pray."</div>`,
   },
   {
-    question: '11. \u00a0 What is the Millennium actually going to be like? Is it a literal kingdom on earth?',
+    question: 'Q: \u00a0 What is the Millennium actually going to be like? Is it a literal kingdom on earth?',
     answer: `<p>Yes — and this is where the biblical picture is far more earthy and concrete than most Christians have been taught.</p>
 <p>The Millennium is not heaven. It is not a disembodied spiritual existence. It is the earth — renewed, ordered, and ruled by Christ and the resurrected saints. Revelation 5:10 explicitly says the saints will "reign on the earth." Zechariah 14 describes Christ standing on the Mount of Olives, Jerusalem as the governing center of the world, and the nations coming up annually to celebrate the Feast of Tabernacles. Isaiah 11:6–9 describes the natural world restored — the predator-prey relationship healed, the earth full of the knowledge of the Lord as the waters cover the sea.</p>
 <p>Isaiah 65:21–23 describes people building houses and living in them, planting vineyards and eating their fruit — real work, real productivity, real enjoyment of the created order without the futility that sin introduced. The resurrected saints govern alongside Christ — Luke 19:17–19 describes faithful servants being given authority over cities — while natural-bodied humanity continues to populate and develop the earth under righteous administration.</p>
@@ -88,7 +88,7 @@ export const faqItems: FaqItem[] = [
 <div class="faq-scripture">Revelation 5:10 &nbsp;·&nbsp; Revelation 20:4–6 &nbsp;·&nbsp; Isaiah 11:6–9 &nbsp;·&nbsp; Isaiah 65:21–23 &nbsp;·&nbsp; Zechariah 14:9–16 &nbsp;·&nbsp; Luke 19:17–19</div>`,
   },
   {
-    question: '12. \u00a0 What is the single most important thing I should do in response to everything in this study?',
+    question: 'Q: \u00a0 What is the single most important thing I should do in response to everything in this study?',
     answer: `<p>Know God. Not know about God — know Him.</p>
 <p>Every framework in this study — the creation week pattern, the apostolic tradition, the feast calendar, the two witnesses, the gestational clock — ultimately points back to the character of the God who authored it. The God who embedded a message in the first seven days of creation is the same God who has been pursuing His creation across six thousand years with patient, purposeful, covenant love. He is not distant. He is not mechanical. He is personal. He knows your name. He is not willing that you should perish.</p>
 <p>The person who responds to this study by calculating dates and watching news headlines has missed the point. The person who responds by pressing deeper into the God who planned all of this before the foundation of the world — who asks what it means to know this God intimately, to be formed by Him, to reflect His character into the world in whatever sphere they occupy — that person has understood what the whole study was really about.</p>
