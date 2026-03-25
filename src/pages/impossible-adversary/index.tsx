@@ -9,6 +9,7 @@ import PillarIII from './tabs/PillarIII'
 import PillarIV from './tabs/PillarIV'
 import Conclusion from './tabs/Conclusion'
 import Appendix from './tabs/Appendix'
+import FaqSection from './tabs/FaqSection'
 import './ImpossibleAdversary.css'
 
 const tabs = [
@@ -19,6 +20,7 @@ const tabs = [
   { id: 'p4',         label: 'IV · Christology' },
   { id: 'conclusion', label: 'Conclusion' },
   { id: 'appendix',  label: 'Appendix' },
+  { id: 'faq',       label: 'FAQ' },
 ]
 
 export default function ImpossibleAdversary() {
@@ -59,6 +61,7 @@ export default function ImpossibleAdversary() {
         {activeTab === 'p4'         && <PillarIV onNext={nextTab} />}
         {activeTab === 'conclusion' && <Conclusion onNext={nextTab} />}
         {activeTab === 'appendix'   && <Appendix />}
+        {activeTab === 'faq'        && <FaqSection />}
       </div>
     </div>
   )

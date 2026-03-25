@@ -1,0 +1,361 @@
+import { useState } from 'react'
+import { SectionCard, CrossDivider, ClosingBox } from '../components'
+
+// ── TYPES ─────────────────────────────────────────────────
+interface FaqItem {
+  question: string
+  answer: React.ReactNode
+}
+
+type CategoryId = 'pastoral' | 'clarity' | 'objection'
+
+interface Category {
+  id: CategoryId
+  label: string
+  description: string
+  items: FaqItem[]
+}
+
+// ── CATEGORY 1: PASTORAL & PRACTICAL ──────────────────────
+const pastoralItems: FaqItem[] = [
+  {
+    question: 'If there is no devil, does sin become less serious? Does evil seem smaller without an adversary?',
+    answer: (
+      <>
+        <p>The opposite is true — and this is one of the most important reversals this thesis produces. When an external adversary bears the weight of evil's origin, the human being is subtly demoted from moral agent to victim. We become casualties of a cosmic war rather than the source of the problem. That framing, however unintentionally, diminishes both the gravity of sin and the dignity of human responsibility.</p>
+        <p>Remove the external adversary and the full weight of evil lands exactly where Scripture places it — in the human heart. That is not a lighter burden. It is a heavier one. James 4:1 asks: "What causes fights and quarrels among you? Don't they come from your desires that battle within you?" The answer is not a demon. It is us. Every war, every atrocity, every betrayal — the human interior is the source. That reckoning is far more sobering than blaming an external being we can neither see nor confront.</p>
+        <p>What this framework restores is honest ownership of the human condition. And honest ownership is the first movement of genuine repentance.</p>
+        <p className="ia-faq-scripture">James 4:1–2 &nbsp;·&nbsp; Jeremiah 17:9 — "The heart is deceitful above all things" &nbsp;·&nbsp; Mark 7:21–23 — Jesus locates the source of all evil within the human heart</p>
+      </>
+    ),
+  },
+  {
+    question: 'What about generational curses and spiritual warfare — is none of that real?',
+    answer: (
+      <>
+        <p>The phenomenon is real. The traditional explanation requires revision. Generational patterns of sin, addiction, abuse, and moral failure are genuinely transmitted through families — not because a demon attaches itself to bloodlines, but because sin is learned, modeled, normalized, and socially transmitted across generations. This is precisely what Exodus 20:5 describes when it speaks of iniquity visiting children to the third and fourth generation — a social and formative reality, not a supernatural curse requiring deliverance ministry to break.</p>
+        <p>As for spiritual warfare — the warfare is real and it is interior. Paul's language in Ephesians 6 about principalities and powers is best understood as describing the systemic, structural, and ideological forces that shape human behavior — the embedded patterns of thought, the cultural assumptions, the institutional expressions of collective sin — rather than a literal army of supernatural beings. The armor Paul describes is not weapons against demons. It is the character of God applied to the interior war: truth, righteousness, faith, salvation, the Word.</p>
+        <p>The warfare is real. The enemy is within. And the weapons are exactly the ones Paul names.</p>
+        <p className="ia-faq-scripture">Exodus 20:5–6 — generational patterns, not supernatural curses &nbsp;·&nbsp; Ephesians 6:10–18 &nbsp;·&nbsp; Romans 12:2 — "be transformed by the renewing of your mind"</p>
+      </>
+    ),
+  },
+  {
+    question: 'My experience in deliverance ministry felt very real. Are you saying that was not what it appeared to be?',
+    answer: (
+      <>
+        <p>The experience was real. The relief was real. The transformation was real. The framework used to explain it may require revision — but the reality of what occurred does not depend on the accuracy of the cosmological interpretation placed on it.</p>
+        <p>Human beings are extraordinarily susceptible to framing. When a person understands their compulsive behavior, addiction, intrusive thought pattern, or psychological bondage as an external entity that can be named and expelled, the act of naming, confronting, and renouncing it can produce genuine liberation — not because a demon left, but because the interior dynamic was externalized, faced, and rejected with the full authority of the believing community gathered around the person. That is powerful and real ministry regardless of the cosmological framework applied to it.</p>
+        <p>Jesus healed real people using the language and framework his culture possessed. He met them where they were. The ministry was not less real because the description was phenomenological rather than ontological. The same mercy operates today — even when the explanation is imprecise.</p>
+        <p className="ia-faq-scripture">Mark 9:17–27 &nbsp;·&nbsp; Acts 10:38 — "healing all who were oppressed" &nbsp;·&nbsp; James 5:16 — the healing power of honest confession in community</p>
+      </>
+    ),
+  },
+  {
+    question: 'Does holding this view make me a heretic? Am I outside orthodox Christianity for considering it?',
+    answer: (
+      <>
+        <p>The historic ecumenical creeds — the Apostles' Creed, the Nicene Creed, the Chalcedonian Definition — do not require belief in a literal personal Satan or a fallen angelic order as a condition of orthodox Christian faith. The creeds define what is essential: the nature of God as Trinity, the full divinity and full humanity of Christ, the incarnation, crucifixion, resurrection, and return. The cosmology of demonology is not among the ecumenical essentials.</p>
+        <p>The tradition has overwhelmingly affirmed a personal Satan — that is true and deserves honest acknowledgment. But tradition is not the final arbiter of truth. The Bereans in Acts 17 were commended, not condemned, for testing everything against Scripture rather than accepting teaching on the authority of the teacher. The question is not what the tradition says — the question is what the text says, read with exegetical honesty and tested against the governing principle of God's own Nature and Character.</p>
+        <p>Engage the argument. Test it against Scripture. Hold fast to what is good.</p>
+        <p className="ia-faq-scripture">Acts 17:11 — the Berean commendation &nbsp;·&nbsp; 1 Thessalonians 5:21 &nbsp;·&nbsp; The Nicene Creed — examine what is and is not required</p>
+      </>
+    ),
+  },
+  {
+    question: 'If demons are just mental illness, does that reduce Jesus to a first-century therapist?',
+    answer: (
+      <>
+        <p>This objection mistakes phenomenological description for ontological reduction. Saying that what the first century called demon possession corresponds to what we now recognize as neurological and psychological illness does not diminish what Jesus did — it clarifies it. He healed real people of real conditions that were devastating their lives. That is not a reduction. That is the Incarnation in action.</p>
+        <p>A first-century therapist could not still a storm, raise the dead, feed five thousand, or walk on water. Jesus's healings of what the text calls "unclean spirits" are part of a comprehensive ministry of restoration — the in-breaking of the Kingdom of God into the domain of human suffering and brokenness. The cosmological framework used to describe those conditions was the framework of his audience. He met them there. That is pastoral genius of the highest order, not a limitation.</p>
+        <p>The power was real. The compassion was real. The restoration was real. The description was first-century. None of those four statements contradict the others.</p>
+        <p className="ia-faq-scripture">Luke 4:18 — "to proclaim freedom for the prisoners" &nbsp;·&nbsp; Matthew 11:4–5 — Jesus's own summary of His ministry &nbsp;·&nbsp; Acts 10:38</p>
+      </>
+    ),
+  },
+]
+
+// ── CATEGORY 2: SEEKING CLARITY ───────────────────────────
+const clarityItems: FaqItem[] = [
+  {
+    question: 'If not a personal being, what is the "satan" language in the New Testament actually referring to?',
+    answer: (
+      <>
+        <p>The Hebrew word <em>satan</em> (שָׂטָן) means adversary, accuser, or one who opposes. It is a functional description, not a proper name. In the Old Testament it appears as a title — "the accuser" — most visibly in Job, where it describes a role within the heavenly court rather than naming a personal being. The tradition elevated this functional title into a personal identity, a name, and ultimately a whole cosmology. That elevation is not the text. It is what was done to the text.</p>
+        <p>In the New Testament, satan language carries the same functional weight. When Jesus says "get behind me, Satan" to Peter in Matthew 16:23, the context is explicit — Peter is thinking with human reasoning, not with the mind of God. Jesus is not identifying Peter as demonically possessed. He is naming the adversarial function Peter's words are serving in that moment. The language describes the role. It does not identify a being.</p>
+        <p>Read this way, satan language in the New Testament consistently describes the adversarial impulse — the interior resistance to God's purposes, the accusing voice, the pull toward self-preservation and self-deification — without requiring a personal supernatural entity behind it.</p>
+        <p className="ia-faq-scripture">Matthew 16:22–23 — Peter as "satan" &nbsp;·&nbsp; Job 1–2 — the accuser as a role &nbsp;·&nbsp; Zechariah 3:1–2 — the accuser in the heavenly court</p>
+      </>
+    ),
+  },
+  {
+    question: 'How do we read the temptation of Jesus in the wilderness if the adversary is interior? Did He argue with Himself?',
+    answer: (
+      <>
+        <p>The narrative form of the temptation accounts in Matthew and Luke is visionary and dramatic — the same literary mode used throughout prophetic and apocalyptic literature to externalize interior realities so they can be engaged, examined, and resolved. Ezekiel's visions, John's Revelation, and Daniel's night visions all give external, dramatic form to realities that are not literally spatial. The wilderness temptation narrative does the same thing.</p>
+        <p>What Jesus was engaging was His own human nature — not yet at full stature, as Hebrews 5:8–9 confirms — pressing the legitimate needs of embodied existence against the call and timing of God. The hunger was real. The desire for validation was real. The appeal of achieving God's purposes through power rather than through the cross was real. These are not invented temptations. They are the deepest temptations of the human condition.</p>
+        <p>The narrative externalizes them as a dramatic encounter precisely so the reader can see the structure of each temptation clearly and watch how Jesus meets each one — with the Word of God, from within the human condition, through the same resources available to every human being. That is the whole point of the second Adam typology. He did not win by divine override. He won as a man.</p>
+        <p className="ia-faq-scripture">Matthew 4:1–11 &nbsp;·&nbsp; Hebrews 5:8–9 &nbsp;·&nbsp; Romans 5:19 — "through the obedience of the one man"</p>
+      </>
+    ),
+  },
+  {
+    question: 'What about Revelation 12 — the dragon identified as "that ancient serpent called the devil and Satan"? Does that not explicitly connect Genesis 3 to a personal being?',
+    answer: (
+      <>
+        <p>Revelation is apocalyptic literature — the most densely symbolic genre in the entire canon. Its images are not meant to be read as literal identifications but as concentrated theological portraits. The dragon in Revelation 12 is a composite symbol drawn from the full sweep of Old Testament imagery — Leviathan, the chaos monster, the serpent of Genesis 3, the accusatory role of the heavenly adversary — all collapsed into one figure that represents the totality of the power of sin, accusation, and opposition to God's purposes operating through human history and human systems.</p>
+        <p>When the text says "that ancient serpent called the devil and Satan," it is not providing a personal biography. It is giving the dragon its theological résumé — connecting it to every prior expression of the adversarial principle across the whole canon. The nachash of Genesis 3, the accuser of Job, the satan of Zechariah 3 — all of it is being gathered into one symbolic figure that names what has been operating in human experience since the beginning.</p>
+        <p>The identification confirms the thesis rather than contradicting it. The adversarial principle — sin, accusation, the interior impulse toward self-deification — has been the same adversary all along. Revelation simply gives it its final symbolic portrait.</p>
+        <p className="ia-faq-scripture">Revelation 12:9 &nbsp;·&nbsp; Revelation 20:2 &nbsp;·&nbsp; Isaiah 27:1 — Leviathan as chaos symbol &nbsp;·&nbsp; Job 26:13</p>
+      </>
+    ),
+  },
+  {
+    question: 'What happens to the concept of spiritual warfare if there is no external enemy to fight?',
+    answer: (
+      <>
+        <p>Spiritual warfare becomes more demanding, not less. Fighting an external enemy requires vigilance directed outward — watching for attack, resisting an adversary you can project your struggle onto. Fighting the interior enemy requires something far harder: honest self-examination, the willingness to see your own desire as the source of your temptation, and the sustained discipline of bringing every thought captive to the obedience of Christ.</p>
+        <p>Paul's warfare language in 2 Corinthians 10:3–5 is explicit about the target: "We demolish arguments and every pretension that sets itself up against the knowledge of God, and we take captive every thought to make it obedient to Christ." The strongholds are interior. The weapons are not physical. The battlefield is the mind.</p>
+        <p>This is harder than fighting a demon. It requires no less than what Paul describes in Romans 12:2 — the complete renewing of the mind, the ongoing transformation of the interior life by the Spirit of God. That is warfare of the most demanding kind. And it is precisely what the apostolic witness calls us to.</p>
+        <p className="ia-faq-scripture">2 Corinthians 10:3–5 &nbsp;·&nbsp; Romans 12:2 &nbsp;·&nbsp; Philippians 4:8 — the discipline of directed thought</p>
+      </>
+    ),
+  },
+  {
+    question: 'Where did the traditional Satan belief actually come from historically?',
+    answer: (
+      <>
+        <p>The traditional personal Satan is the product of several converging streams, none of them original to the Mosaic or prophetic tradition. The most significant is Second Temple Jewish apocalypticism — the period between the close of the Old Testament canon and the New Testament, roughly 400 BC to AD 100. During this period, texts like 1 Enoch, the Book of Jubilees, and the War Scroll developed an elaborate angelology and demonology that had no precedent in the Torah or the prophets. These texts were enormously influential but were never canonical.</p>
+        <p>Zoroastrianism — the Persian religious system Israel was immersed in during the exile and post-exilic period — introduced a thoroughgoing cosmic dualism: a good deity and an evil deity in eternal conflict. This framework was absorbed into Jewish thought during and after the Babylonian captivity and significantly shaped the Second Temple cosmology that later influenced early Christianity.</p>
+        <p>Greek philosophical dualism — the sharp distinction between the spiritual (good) and the material (corrupt) — further reinforced a framework in which evil required a personal supernatural explanation. By the time the early church fathers were writing, all three streams had been flowing through Jewish and Gentile Christianity for generations. The tradition was not examined. It was inherited. And it was read back into texts that did not originally require it.</p>
+        <p className="ia-faq-scripture">1 Enoch 6–11 — the Watcher tradition &nbsp;·&nbsp; Zechariah 3:1–2 — the pre-exilic accuser role &nbsp;·&nbsp; Daniel 10 — Persian-period angelology development</p>
+      </>
+    ),
+  },
+  {
+    question: 'What does this change about how I pray, how I live, and how I understand my own sin?',
+    answer: (
+      <>
+        <p>It changes the address of your warfare. Instead of praying against external forces, you pray for interior transformation — for the renewing of your mind, for the desires of your heart to be reordered by the Spirit, for the enmity God installed between you and sin to do its merciful work. Prayer becomes less about binding and commanding and more about the honest confession and surrender that James 4:7–8 describes: "Submit yourselves to God. Resist the devil and he will flee from you. Draw near to God and he will draw near to you."</p>
+        <p>In daily life, it means taking full ownership of your temptations. When you are drawn toward sin, you do not ask what demonic influence is at work. You ask what desire within you is reaching beyond God's provision or timing. That is a harder question. It is also the one James 1:14 insists you ask.</p>
+        <p>In understanding your sin, it produces something the tradition often struggles to produce: genuine humility without self-condemnation. You are not a victim of cosmic forces beyond your control. You are a human being with desires that have not yet been fully surrendered to God — and God's own mercy has built into those desires a restlessness that will not let you be satisfied with anything less than Himself. The war is interior. The mercy is interior. And the victory is available from within, through the same Spirit that raised Christ from the dead.</p>
+        <p className="ia-faq-scripture">James 4:7–8 &nbsp;·&nbsp; Romans 8:11 &nbsp;·&nbsp; Galatians 5:16–17 — "the flesh desires what is contrary to the Spirit"</p>
+      </>
+    ),
+  },
+  {
+    question: 'Is this framework compatible with fellowship and membership in a church that holds the traditional view?',
+    answer: (
+      <>
+        <p>Yes — and the posture that compatibility requires is worth naming clearly. This is not a creedal issue. It is not a matter on which the historic ecumenical church has required uniformity as a condition of fellowship. It is a theological position on which serious, Scripture-loving believers have disagreed and will continue to disagree.</p>
+        <p>The appropriate posture is not to make this a point of division, but to hold it with the kind of humble confidence that comes from doing the exegetical work — willing to engage questions, willing to be challenged, not requiring agreement as a condition of relationship. The Berean spirit does not demand that everyone arrive at the same conclusions immediately. It demands that everyone take Scripture seriously enough to keep examining it.</p>
+        <p>Where this view creates tension is in contexts that treat deliverance ministry as central to discipleship, or that make Satan's activity the primary explanation for every struggle and failure. In those contexts, gentle, honest, pastoral engagement — not confrontation — is the right path. The thesis stands on its own. It does not need to be imposed.</p>
+        <p className="ia-faq-scripture">Romans 14:1–4 — receiving those whose faith is different &nbsp;·&nbsp; Ephesians 4:3 — "make every effort to keep the unity of the Spirit" &nbsp;·&nbsp; 1 Corinthians 8 — knowledge and love</p>
+      </>
+    ),
+  },
+]
+
+// ── CATEGORY 3: THEOLOGICAL OBJECTIONS ───────────────────
+const objectionItems: FaqItem[] = [
+  {
+    question: 'Job 1–2: Satan appears before God as an accuser presenting himself among the heavenly beings. Is that not a literal personal being?',
+    answer: (
+      <>
+        <p>The satan in Job 1–2 is not a proper name. It is a title with the definite article: <em>ha-satan</em> — "the accuser" or "the adversary." This is not Satan the personal being of later tradition. It is a functional role within the heavenly court — the prosecuting figure whose job is to bring charges against those under examination. The same figure appears in Zechariah 3:1–2 in the same prosecutorial role, again with the definite article marking it as a title, not a name.</p>
+        <p>The satan in Job operates entirely within God's sovereign permission. He cannot act outside the boundaries God sets. He brings accusations. He is restrained, directed, and ultimately overruled. This is not a picture of an autonomous cosmic adversary in rebellion against God. It is a picture of an adversarial function within God's own governance of creation — a role that describes the prosecutorial dynamic that human sinfulness creates, not a personal being of independent malevolent will.</p>
+        <p>The later tradition took this functional title, stripped it of its definite article, made it a proper name, and built a cosmology from it. That cosmology is not in the Job text. It was imported into it.</p>
+        <p className="ia-faq-scripture">Job 1:6 — "the sons of God came to present themselves, and the satan also came" &nbsp;·&nbsp; Zechariah 3:1–2 — the same prosecutorial role &nbsp;·&nbsp; Numbers 22:22 — the angel of the Lord acting as "satan" (adversary) to Balaam</p>
+      </>
+    ),
+  },
+  {
+    question: "Jude 9: Michael the archangel disputes with the devil over Moses' body. That sounds extremely literal.",
+    answer: (
+      <>
+        <p>Jude 9 is quoting from the <em>Assumption of Moses</em>, an intertestamental pseudepigraphal text — not from canonical Scripture. This is one of the most important and most overlooked exegetical facts about this verse. Jude is using a known piece of Second Temple Jewish tradition as an illustrative example, in exactly the same way he uses the Enoch tradition in verse 14. He is not endorsing the full cosmology of these texts as canonical revelation. He is drawing on shared cultural currency to make a point about presumptuous speech.</p>
+        <p>The point Jude is making is about the posture of humility even in the face of evil — "the Lord rebuke you" rather than self-asserting authority. That pastoral point does not require the literal historicity of the narrative any more than Jesus's use of the mustard seed required botanical precision. The use of an extracanonical illustration is a recognized feature of first-century Jewish and Christian teaching. It does not establish the cosmology of the source text as apostolic doctrine.</p>
+        <p className="ia-faq-scripture">Jude 9 &nbsp;·&nbsp; Jude 14–15 — Enoch also quoted as illustration &nbsp;·&nbsp; 2 Peter 2:11 — parallel passage without the name "devil"</p>
+      </>
+    ),
+  },
+  {
+    question: 'Luke 10:18: Jesus says "I saw Satan fall like lightning from heaven." Did He not witness a literal cosmic event?',
+    answer: (
+      <>
+        <p>The context of Luke 10:18 is the return of the seventy-two disciples reporting that even demons submit to them in Jesus's name. Jesus responds with this statement. The grammar is significant: the verb "I saw" is in the imperfect tense in some readings, and the statement functions as a visionary or prophetic declaration rather than a report of a past historical event.</p>
+        <p>Read in context, Jesus is making a statement about the collapse of the power of accusation and systemic evil in the face of the advancing Kingdom of God. The seventy-two are going out, the sick are healed, the oppressed are freed, and the power of the adversarial principle — sin, accusation, the bondage of the human interior — is falling. "Like lightning" describes suddenness and totality, not a literally spatial descent.</p>
+        <p>This reading is consistent with Isaiah 14 — which uses the same falling-from-heaven imagery for the king of Babylon's collapse — and with John 12:31, where Jesus says "now the prince of this world will be driven out" in the context of His approaching crucifixion. These are statements about the dismantling of the reign of sin and accusation, not eyewitness reports of a prehistoric angelic war.</p>
+        <p className="ia-faq-scripture">Luke 10:17–20 &nbsp;·&nbsp; Isaiah 14:12–15 — the same imagery for Babylon's king &nbsp;·&nbsp; John 12:31 &nbsp;·&nbsp; Revelation 12:10 — "the accuser of our brothers has been hurled down"</p>
+      </>
+    ),
+  },
+  {
+    question: '1 Peter 5:8: "Your adversary the devil prowls around like a roaring lion." Is that not a personal warning about a real being?',
+    answer: (
+      <>
+        <p>It is a personal warning about a real threat. The question is whether that threat is an external being or the interior adversary personified in pastoral imagery — and the context of 1 Peter 5 strongly supports the latter reading. Peter has just called his readers to humble themselves, cast their anxiety on God, and resist. The sequence is: humble yourself → trust God with your anxiety → be sober-minded and watchful → resist. This is the pattern of interior spiritual discipline, not a strategy for combating an external supernatural attacker.</p>
+        <p>The roaring lion imagery is drawn from the Psalms, where it consistently describes the experience of accusation, overwhelming fear, and the crushing sense of being hunted by one's own failures and enemies. Psalm 22:13 and Psalm 22:21 use the lion to describe the experience of being surrounded and devoured — not a literal animal, but a vivid portrait of a very real interior and relational reality.</p>
+        <p>Peter's point is that the adversarial experience — the accusation, the pressure to abandon faith, the devouring anxiety — is real and common to all believers everywhere. "Your brothers throughout the world are undergoing the same kind of sufferings." This is not a warning about individual demon attack. It is a pastoral word about the shared human experience of adversarial pressure — and the call to resist it with the same posture James 4:7 prescribes.</p>
+        <p className="ia-faq-scripture">1 Peter 5:6–10 &nbsp;·&nbsp; Psalm 22:13, 21 &nbsp;·&nbsp; James 4:7 — the same "resist" language</p>
+      </>
+    ),
+  },
+  {
+    question: 'Ephesians 6:12: "We do not wrestle against flesh and blood, but against principalities and powers." Is Paul not describing real supernatural beings?',
+    answer: (
+      <>
+        <p>Paul's language of principalities, powers, rulers of darkness, and spiritual forces of evil in the heavenly realms is drawn from the cosmological vocabulary of his first-century Jewish and Greco-Roman world. His point is not to provide a taxonomy of supernatural beings. His point is to name the nature of the warfare his readers are actually engaged in — and to make clear it is not primarily against other human beings.</p>
+        <p>The most exegetically coherent reading of these terms identifies them as the structural, ideological, and systemic forces that animate human institutions and cultural patterns in opposition to the Kingdom of God. Walter Wink's thorough study of this language demonstrates that these terms in Paul consistently refer to the interiority of exterior institutions — the spirit that animates an empire, a religion, an economic system, a social structure. They are real. They are powerful. They are not personal beings with wings.</p>
+        <p>This reading is confirmed by Paul's own description of the armor. Truth, righteousness, the gospel of peace, faith, salvation, the Word of God — these are not weapons against flying demons. They are the character of God applied to the interior life and the cultural engagement of the believer. The battle is for the mind, the will, and the patterns of thought and behavior that either conform to or resist the purposes of God.</p>
+        <p className="ia-faq-scripture">Ephesians 6:10–18 &nbsp;·&nbsp; Colossians 2:15 — Christ disarming "the powers and authorities" at the cross &nbsp;·&nbsp; Romans 8:38–39 — principalities and powers cannot separate from God's love</p>
+      </>
+    ),
+  },
+  {
+    question: 'John 8:44: Jesus calls the devil "a murderer from the beginning" and "the father of lies." Is He not describing a real personal being?',
+    answer: (
+      <>
+        <p>Jesus is speaking to religious leaders who are seeking to kill Him and who are rejecting the truth He speaks. The immediate context is their murderous intent and their willingness to believe a lie rather than the truth standing in front of them. When Jesus says "you belong to your father, the devil," He is using the same kind of relational-origin language He uses elsewhere — "you are of your father" is Semitic idiom for describing the source and character of one's behavior and values, not necessarily literal biological descent.</p>
+        <p>The devil as "murderer from the beginning" points back to Genesis 3 and the nachash — the interior impulse toward forbidden wisdom that introduced death into human experience. The father of lies is the same impulse: the self-deception that tells the human being they can be like God on their own terms. This is not a personal being Jesus is describing. It is the anthropological condition of humanity in rebellion — personified, as the nachash was personified, because that is how the deepest truths about the human interior are most powerfully communicated.</p>
+        <p>Jesus's own testimony about the source of temptation — that it comes from within the human heart (Mark 7:21–23) — is consistent with reading John 8:44 as a description of the adversarial condition of humanity rather than the biography of a supernatural entity.</p>
+        <p className="ia-faq-scripture">John 8:37–47 &nbsp;·&nbsp; Genesis 3 — "the beginning" &nbsp;·&nbsp; Mark 7:21–23 — Jesus on the interior source of evil &nbsp;·&nbsp; 1 John 3:8 — "the devil has been sinning from the beginning"</p>
+      </>
+    ),
+  },
+  {
+    question: 'Irenaeus, Tertullian, and the early fathers clearly believed in a literal Satan. Are you saying the apostolic tradition was wrong?',
+    answer: (
+      <>
+        <p>The early fathers were operating within a cultural and cosmological environment that had already absorbed Second Temple Jewish apocalypticism, Zoroastrian dualism, and Greek cosmological frameworks. They received the tradition — they did not construct it from scratch through independent exegesis. Their belief in a personal Satan reflects the world they inhabited and the literature that shaped Jewish and Gentile Christianity before they wrote. That does not make them wrong about everything. It means this particular element of their thinking was shaped by sources that were not part of the original apostolic deposit.</p>
+        <p>It is also worth noting that Irenaeus himself — one of the most important patristic witnesses for the apostolic tradition — held views about recapitulation and the second Adam that actually support the framework of this thesis more than the traditional demonology. His insistence that Christ had to genuinely recapitulate every stage of human existence in order to redeem it requires precisely the interior parallel between Adam's temptation and Christ's that Pillar Four argues for. The best of Irenaeus points toward this thesis, even if his cosmology includes a personal adversary.</p>
+        <p>Tradition is a witness. It is not the final judge. The apostolic rule is Scripture — and Scripture, read with the exegetical honesty the fathers themselves demanded, is the standard against which even the fathers must be tested.</p>
+        <p className="ia-faq-scripture">Irenaeus, Against Heresies 3.18–19 — recapitulation Christology &nbsp;·&nbsp; Galatians 1:8 — even an apostle is not the final authority &nbsp;·&nbsp; Acts 17:11</p>
+      </>
+    ),
+  },
+  {
+    question: 'Without a personal Satan, how do you explain the origin of evil? Does God become responsible?',
+    answer: (
+      <>
+        <p>This is the question the tradition has always used to justify the personal Satan — and it is worth pressing on it carefully, because the traditional answer does not actually solve the problem it claims to solve. If God created Satan knowing he would fall, knowing he would corrupt humanity, and chose to create him anyway — then God is no less implicated in the origin of evil than He would be if evil arose from within the creatures He made. The personal Satan does not remove God from the causal chain. It just adds a middle step.</p>
+        <p>The more honest answer is this: evil is the consequence of creaturely freedom — the genuine capacity of finite beings made in God's image to choose their own terms of existence over God's. God did not create evil. He created creatures capable of genuine moral choice, and genuine moral choice carries the genuine possibility of moral failure. The nachash in Genesis 3 is not an external cause of the fall. It is the personification of the human capacity for self-deception and self-deification that was always latent in creaturely freedom.</p>
+        <p>God's response to that failure — blocking the Tree of Life, installing the enmity, promising the seed of the woman — is not the response of a God who is responsible for evil. It is the response of a God who takes full sovereign action to address evil, limit it, and ultimately redeem it. That is the governing principle of His Nature expressed from the very first moment of the fall.</p>
+        <p className="ia-faq-scripture">Genesis 3:22–24 &nbsp;·&nbsp; Romans 5:12 — "sin entered the world through one man" &nbsp;·&nbsp; James 1:13 — "God cannot be tempted by evil, nor does he tempt anyone"</p>
+      </>
+    ),
+  },
+  {
+    question: "The Book of Enoch and Second Temple literature show this was the universal Jewish belief Jesus inherited. Doesn't that validate it?",
+    answer: (
+      <>
+        <p>Widespread cultural belief is not the same as revealed truth. The universal Jewish belief Jesus inherited also included temple-centered worship, dietary laws, Sabbath regulations, and a robust expectation of a militarily triumphant Messiah. Jesus challenged, reframed, or transcended every one of those elements. He was not a passive recipient of his cultural inheritance. He was the one to whom that inheritance pointed — and He consistently read the Law and the Prophets in ways that surprised and unsettled those who thought they already understood them.</p>
+        <p>Second Temple literature — 1 Enoch, Jubilees, the War Scroll, the Testament of Solomon — is historically valuable for understanding the world Jesus and the apostles inhabited. It is not canonical. It was never canonical. The early church made careful and contested decisions about which texts belonged in the apostolic deposit, and these texts did not make the cut — not by accident, but because the communities closest to the apostolic witness recognized they carried cosmological freight that was not consistent with the revelation entrusted to Israel through Moses and the prophets.</p>
+        <p>The question is not what the Second Temple world believed. The question is what God revealed — in the Torah, in the prophets, in Christ, and in the apostolic witness. That is the canon. That is the standard. And that standard, read carefully, does not require what the Second Temple literature added to it.</p>
+        <p className="ia-faq-scripture">2 Timothy 3:16–17 — the sufficiency of canonical Scripture &nbsp;·&nbsp; Matthew 5:17 — Jesus and the Law &nbsp;·&nbsp; Luke 24:27 — the whole Old Testament points to Christ, not to angelology</p>
+      </>
+    ),
+  },
+  {
+    question: 'C.S. Lewis argued in The Screwtape Letters that the two equal and opposite errors about demons are to disbelieve in them or to feel excessive interest. Does this framework not fall into the first error?',
+    answer: (
+      <>
+        <p>Lewis's warning is pastorally wise and deserves respect — but it is a pastoral warning, not an exegetical argument. He is cautioning against two unhealthy postures of the will: dismissive contempt and obsessive fascination. He is not making an independent exegetical case for the ontological reality of personal demonic beings. The Screwtape Letters is literary theology in the form of brilliant satire — Lewis himself acknowledged that the demonic framework was a literary device, not a doctrinal treatise.</p>
+        <p>The framework of this thesis does not fall into the error Lewis describes precisely because it does not dismiss the reality of the adversarial principle or the seriousness of the interior war. It relocates them. The war is no less real for being interior. The adversary is no less dangerous for being the human heart rather than a winged being. If anything, the interior adversary demands more sustained vigilance than an external one — because you cannot simply bind it and command it to leave. You must submit it to God, renew your mind, and bring every thought captive to the obedience of Christ. That is not dismissiveness. That is the most demanding spiritual warfare the apostolic witness describes.</p>
+        <p className="ia-faq-scripture">2 Corinthians 10:3–5 &nbsp;·&nbsp; Romans 12:2 &nbsp;·&nbsp; Philippians 4:8 &nbsp;·&nbsp; C.S. Lewis, The Screwtape Letters, Preface — Lewis's own qualification of the work</p>
+      </>
+    ),
+  },
+]
+
+// ── CATEGORIES CONFIG ─────────────────────────────────────
+const categories: Category[] = [
+  {
+    id: 'pastoral',
+    label: 'Pastoral & Practical',
+    description: 'Concerns about real-world implications for faith and practice',
+    items: pastoralItems,
+  },
+  {
+    id: 'clarity',
+    label: 'Seeking Clarity',
+    description: 'Honest questions from readers working through the framework',
+    items: clarityItems,
+  },
+  {
+    id: 'objection',
+    label: 'Theological Objections',
+    description: 'Hard pushback from within the orthodox and patristic tradition',
+    items: objectionItems,
+  },
+]
+
+// ── ACCORDION ─────────────────────────────────────────────
+function FaqList({ items }: { items: FaqItem[] }) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  function toggle(i: number) { setOpenIndex(prev => prev === i ? null : i) }
+  return (
+    <>
+      {items.map((item, i) => {
+        const isOpen = openIndex === i
+        return (
+          <div key={i} className="ia-faq-item">
+            <div className={`ia-faq-q${isOpen ? ' open' : ''}`} onClick={() => toggle(i)}>
+              <span>{item.question}</span>
+              <span className="ia-faq-arrow">▾</span>
+            </div>
+            {isOpen && <div className="ia-faq-a">{item.answer}</div>}
+          </div>
+        )
+      })}
+    </>
+  )
+}
+
+// ── COMPONENT ─────────────────────────────────────────────
+export default function FaqSection() {
+  const [activeCategory, setActiveCategory] = useState<CategoryId>('pastoral')
+  const current = categories.find(c => c.id === activeCategory)!
+
+  return (
+    <SectionCard num="?" title="FAQ & Objections">
+      <p className="ia-body-p ia-faq-intro">
+        Every serious thesis invites questions. Some arise from pastoral concern, some from genuine pursuit of clarity, and some from the weight of tradition that has shaped how we read Scripture for centuries. All of them deserve honest engagement. The answers below are grounded in the same four pillars as the thesis — the Nature of God, Genesis 3, the pattern of divine judgment, and the Christological confirmation.
+      </p>
+
+      <div className="ia-faq-cat-nav">
+        {categories.map(cat => (
+          <button
+            key={cat.id}
+            className={[
+              'ia-faq-cat-btn',
+              `ia-faq-cat-btn--${cat.id}`,
+              activeCategory === cat.id ? `ia-faq-cat-btn--active ia-faq-cat-btn--active-${cat.id}` : '',
+            ].join(' ')}
+            onClick={() => setActiveCategory(cat.id)}
+          >
+            <span className="ia-faq-cat-btn-label">{cat.label}</span>
+            <span className="ia-faq-cat-btn-count">{cat.items.length}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className={`ia-faq-cat-header ia-faq-cat-header--${current.id}`}>
+        <div className="ia-faq-cat-header-text">
+          <span className="ia-faq-cat-header-label">{current.label}</span>
+          <span className="ia-faq-cat-header-desc">{current.description}</span>
+        </div>
+        <span className="ia-faq-cat-header-count">{current.items.length} Questions</span>
+      </div>
+
+      <FaqList items={current.items} />
+
+      <CrossDivider />
+
+      <ClosingBox ornament="✦ &nbsp; A Final Word &nbsp; ✦">
+        Every answer in this FAQ is grounded in Scripture, tested against the internal consistency of the canonical witness, and anchored in the Nature of God as the non-negotiable foundation. Where the tradition has erred, it has erred not by taking evil too seriously — but by locating it in the wrong place. The war is interior. The mercy is interior. And the victory of the second Adam is precisely interior: the same human nature that fell has, in Christ, overcome.<br /><br />
+        Test everything against the Word. Hold fast to what is good.
+      </ClosingBox>
+    </SectionCard>
+  )
+}
