@@ -1,0 +1,613 @@
+/* ── PAGE WRAPPER ─────────────────────────────────────── */
+.impossible-adversary-page {
+  background: radial-gradient(ellipse at 50% 0%, #2a1a08 0%, #0f0a04 60%);
+  min-height: 100vh;
+  padding: 0 0 80px;
+}
+
+.ia-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ── INTRO CARD ───────────────────────────────────────── */
+.ia-intro-card {
+  background: linear-gradient(135deg, var(--parchment) 0%, var(--parchment-dark) 100%);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: clamp(16px, 4vw, 28px) clamp(16px, 5vw, 36px);
+  margin: 0 auto 32px;
+  max-width: 780px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  line-height: 1.85;
+  color: var(--ink-light);
+  text-align: center;
+  font-style: italic;
+}
+
+/* ── TAB NAV (dark theme) ─────────────────────────────── */
+.impossible-adversary-page .tab-nav-wrap {
+  position: relative;
+  margin-bottom: 28px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.impossible-adversary-page .tab-nav {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 0;
+}
+
+.impossible-adversary-page .tab-nav::-webkit-scrollbar { display: none; }
+
+.impossible-adversary-page .tab-btn {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.62rem, 1.8vw, 0.75rem);
+  letter-spacing: 0.08em;
+  padding: 10px clamp(10px, 2.5vw, 18px);
+  background: transparent;
+  color: var(--stone);
+  border: 1px solid transparent;
+  border-bottom: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.impossible-adversary-page .tab-btn:hover { color: var(--gold-light); }
+
+.impossible-adversary-page .tab-btn.active {
+  color: var(--gold-bright);
+  background: rgba(184,134,11,0.12);
+  border-color: var(--gold);
+  border-bottom-color: #0f0a04;
+  margin-bottom: -2px;
+}
+
+.impossible-adversary-page .tab-nav-wrap::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0; bottom: 2px;
+  width: 32px;
+  background: linear-gradient(to right, transparent, #0f0a04 90%);
+  pointer-events: none;
+}
+
+/* ── TAB TOGGLE (mobile) ──────────────────────────────── */
+.impossible-adversary-page .tab-toggle {
+  display: none;
+}
+
+/* ── SECTION CARD ─────────────────────────────────────── */
+.ia-section-card {
+  background: linear-gradient(160deg, var(--parchment) 0%, var(--parchment-dark) 100%);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.5);
+  margin-bottom: 28px;
+}
+
+.ia-section-header {
+  padding: clamp(14px, 3vw, 22px) clamp(16px, 4vw, 30px);
+  background: linear-gradient(135deg, #1a120a 0%, #0d0a06 100%);
+  border-bottom: 3px solid var(--gold);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.ia-section-num {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+  color: var(--gold);
+  opacity: 0.7;
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ia-section-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.72rem, 2.2vw, 1.02rem);
+  letter-spacing: clamp(0.04em, 0.5vw, 0.12em);
+  color: var(--parchment);
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.ia-section-body {
+  padding: clamp(18px, 4vw, 28px) clamp(16px, 4vw, 32px) clamp(20px, 4vw, 32px);
+}
+
+/* ── BODY TEXT ────────────────────────────────────────── */
+.ia-body-p {
+  font-size: clamp(0.97rem, 2.2vw, 1.05rem);
+  line-height: 1.85;
+  color: var(--ink-light);
+  margin-bottom: 16px;
+}
+
+.ia-body-p:last-child { margin-bottom: 0; }
+
+.ia-body-p em { font-style: italic; }
+
+/* ── MOVEMENT LABEL ───────────────────────────────────── */
+.ia-movement {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.62rem, 1.6vw, 0.72rem);
+  letter-spacing: clamp(0.1em, 0.8vw, 0.28em);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 24px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(184,134,11,0.3);
+}
+
+/* ── SCRIPTURE BOX ────────────────────────────────────── */
+.ia-scripture-box {
+  background: rgba(184,134,11,0.07);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  padding: clamp(10px, 2.5vw, 14px) clamp(12px, 3vw, 18px);
+  margin: 16px 0;
+}
+
+.ia-scripture-ref {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.ia-scripture-text {
+  font-size: clamp(0.92rem, 2.1vw, 1rem);
+  line-height: 1.75;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* ── PULL QUOTE ───────────────────────────────────────── */
+.ia-pull-quote {
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  padding: clamp(14px, 3vw, 20px) clamp(12px, 3vw, 24px);
+  margin: 24px 0;
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(1rem, 2.5vw, 1.18rem);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+/* ── PILLAR CARDS ─────────────────────────────────────── */
+.ia-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+  gap: 12px;
+  margin: 20px 0 4px;
+}
+
+.ia-pillar-card {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ia-pillar-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.ia-pillar-header {
+  padding: 12px 14px 10px;
+  text-align: center;
+}
+
+.ia-pillar-header-i   { background: linear-gradient(135deg, #2a1a08 0%, #1a0e04 100%); border-bottom: 2px solid var(--gold); }
+.ia-pillar-header-ii  { background: linear-gradient(135deg, var(--emerald) 0%, #0d2a17 100%); border-bottom: 2px solid var(--emerald-light); }
+.ia-pillar-header-iii { background: linear-gradient(135deg, var(--crimson) 0%, #500f0f 100%); border-bottom: 2px solid var(--crimson-light); }
+.ia-pillar-header-iv  { background: linear-gradient(135deg, var(--cobalt) 0%, #0d1f35 100%); border-bottom: 2px solid var(--cobalt-light); }
+
+.ia-pillar-numeral {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  color: var(--gold-bright);
+  line-height: 1;
+  margin-bottom: 4px;
+  opacity: 0.85;
+}
+
+.ia-pillar-label {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.ia-pillar-body {
+  background: var(--parchment);
+  padding: 10px 13px 12px;
+  font-size: clamp(0.83rem, 1.9vw, 0.91rem);
+  line-height: 1.65;
+  color: var(--ink-light);
+}
+
+/* ── TRIPLE CARDS ─────────────────────────────────────── */
+.ia-triple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.ia-triple-card { border-radius: 4px; overflow: hidden; }
+
+.ia-triple-header-1 { background: linear-gradient(135deg, #3d2b1a, #1a120a); border-bottom: 2px solid var(--gold); padding: 11px 14px; text-align: center; }
+.ia-triple-header-2 { background: linear-gradient(135deg, var(--cobalt), #0d1f35); border-bottom: 2px solid var(--cobalt-light); padding: 11px 14px; text-align: center; }
+.ia-triple-header-3 { background: linear-gradient(135deg, var(--emerald), #0d2a17); border-bottom: 2px solid var(--emerald-light); padding: 11px 14px; text-align: center; }
+
+.ia-triple-hebrew {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1rem, 2.8vw, 1.25rem);
+  color: var(--gold-bright);
+  margin-bottom: 3px;
+}
+
+.ia-triple-meaning {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.62rem, 1.5vw, 0.7rem);
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+}
+
+.ia-triple-body {
+  background: var(--parchment);
+  padding: 10px 13px 12px;
+  font-size: clamp(0.86rem, 2vw, 0.93rem);
+  line-height: 1.68;
+  color: var(--ink-light);
+}
+
+/* ── JUDGMENT CARDS ───────────────────────────────────── */
+.ia-judgment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.ia-judgment-card { border-radius: 4px; overflow: hidden; }
+
+.ia-judgment-header-flood { background: linear-gradient(135deg, var(--cobalt), #0d1f35); border-bottom: 2px solid var(--cobalt-light); padding: 11px 14px; text-align: center; }
+.ia-judgment-header-sodom { background: linear-gradient(135deg, var(--crimson), #500f0f); border-bottom: 2px solid var(--crimson-light); padding: 11px 14px; text-align: center; }
+.ia-judgment-header-fire  { background: linear-gradient(135deg, #3d2b1a, #1a120a); border-bottom: 2px solid var(--gold); padding: 11px 14px; text-align: center; }
+
+.ia-judgment-event {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.68rem, 1.8vw, 0.8rem);
+  letter-spacing: 0.12em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.ia-judgment-verdict {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  color: var(--gold-bright);
+  margin-top: 3px;
+  opacity: 0.9;
+}
+
+.ia-judgment-body {
+  background: var(--parchment);
+  padding: 10px 13px 12px;
+  font-size: clamp(0.86rem, 2vw, 0.93rem);
+  line-height: 1.68;
+  color: var(--ink-light);
+}
+
+/* ── TEMPTATION CARDS ─────────────────────────────────── */
+.ia-temptation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.ia-temptation-card { border-radius: 4px; overflow: hidden; }
+
+.ia-temptation-header {
+  background: linear-gradient(135deg, #2a1a08, #1a0e04);
+  border-bottom: 2px solid var(--gold);
+  padding: 11px 14px;
+  text-align: center;
+}
+
+.ia-temptation-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.68rem, 1.8vw, 0.78rem);
+  letter-spacing: 0.12em;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.ia-temptation-subtext {
+  font-size: clamp(0.75rem, 1.8vw, 0.82rem);
+  color: rgba(255,255,255,0.55);
+  font-style: italic;
+}
+
+.ia-temptation-body {
+  background: var(--parchment);
+  padding: 10px 13px 12px;
+}
+
+.ia-temptation-row { margin-bottom: 7px; }
+
+.ia-temptation-row-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.ia-temptation-row-text {
+  font-size: clamp(0.84rem, 2vw, 0.9rem);
+  line-height: 1.6;
+  color: var(--ink-light);
+}
+
+.ia-temptation-row-text em { font-style: italic; }
+
+/* ── CHALLENGE BOX ────────────────────────────────────── */
+.ia-challenge-box {
+  background: linear-gradient(135deg, #1a120a, #0f0a04);
+  border: 1px solid var(--crimson-light);
+  border-radius: 4px;
+  padding: clamp(16px, 4vw, 26px) clamp(14px, 3.5vw, 28px);
+  margin: 24px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.ia-challenge-label {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+  letter-spacing: 0.22em;
+  color: var(--crimson-light);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.ia-challenge-text {
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  line-height: 1.82;
+  color: var(--parchment);
+  font-style: italic;
+}
+
+/* ── PATRISTIC BOX ────────────────────────────────────── */
+.ia-patristic-box {
+  background: rgba(26,18,10,0.06);
+  border: 1px solid rgba(184,134,11,0.3);
+  border-radius: 4px;
+  padding: clamp(14px, 3vw, 20px) clamp(14px, 3vw, 22px);
+  margin: 16px 0;
+}
+
+.ia-patristic-source {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.6rem, 1.5vw, 0.68rem);
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ia-patristic-text {
+  font-size: clamp(0.92rem, 2.1vw, 1rem);
+  line-height: 1.8;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* ── CLOSING BOX ──────────────────────────────────────── */
+.ia-closing-box {
+  background: linear-gradient(135deg, #1a120a, #0f0a04);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: clamp(20px, 5vw, 32px) clamp(16px, 5vw, 36px);
+  margin: 20px 0 0;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.7), inset 0 1px 0 rgba(184,134,11,0.2);
+  text-align: center;
+}
+
+.ia-closing-ornament {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.6rem, 1.5vw, 0.72rem);
+  letter-spacing: clamp(0.1em, 0.8vw, 0.35em);
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.ia-closing-statement {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(0.92rem, 3vw, 1.45rem);
+  color: var(--gold-bright);
+  line-height: 1.55;
+  text-shadow: 0 0 20px rgba(240,192,64,0.35);
+  margin-bottom: 18px;
+}
+
+.ia-closing-body {
+  font-size: clamp(0.93rem, 2.1vw, 1.02rem);
+  line-height: 1.85;
+  color: var(--parchment);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ── CROSS DIVIDER ────────────────────────────────────── */
+.ia-cross-divider {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1rem;
+  margin: 18px 0;
+  opacity: 0.45;
+  letter-spacing: 0.5em;
+}
+
+/* ── ANCHOR LIST ──────────────────────────────────────── */
+.ia-anchor-list {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(184,134,11,0.25);
+}
+
+.ia-anchor-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.6rem, 1.5vw, 0.68rem);
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ia-anchor-refs {
+  font-size: clamp(0.8rem, 1.9vw, 0.88rem);
+  color: var(--stone);
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* ── NEXT SECTION ─────────────────────────────────────── */
+.ia-next-section {
+  text-align: right;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(184,134,11,0.25);
+}
+
+.ia-next-section-btn {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.65rem, 1.8vw, 0.78rem);
+  letter-spacing: clamp(0.06em, 0.5vw, 0.18em);
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(184,134,11,0.08);
+  border: 1px solid rgba(184,134,11,0.35);
+  border-radius: 3px;
+  padding: 10px clamp(12px, 3vw, 20px);
+  cursor: pointer;
+  transition: all 0.25s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  white-space: normal;
+  text-align: right;
+}
+
+.ia-next-section-btn:hover,
+.ia-next-section-btn:focus {
+  background: rgba(184,134,11,0.18);
+  color: var(--gold-bright);
+  border-color: var(--gold);
+  outline: none;
+}
+
+/* ── FAQ ACCORDION (appendix) ─────────────────────────── */
+.impossible-adversary-page .faq-item {
+  border-bottom: 1px solid rgba(184,134,11,0.2);
+}
+
+.impossible-adversary-page .faq-item:last-of-type { border-bottom: none; }
+
+.impossible-adversary-page .faq-q {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.8rem, 2.1vw, 0.92rem);
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  font-weight: 600;
+  padding: 18px 12px 14px 0;
+  cursor: pointer;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.impossible-adversary-page .faq-arrow {
+  margin-left: auto;
+  padding-left: 14px;
+  color: var(--gold);
+  font-size: 1rem;
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.impossible-adversary-page .faq-q.open .faq-arrow { transform: rotate(180deg); }
+
+.impossible-adversary-page .faq-a {
+  padding: 0 4px 18px 0;
+}
+
+.impossible-adversary-page .faq-a p {
+  font-size: clamp(0.93rem, 2.1vw, 1rem);
+  line-height: 1.82;
+  color: var(--ink-light);
+  margin-bottom: 12px;
+}
+
+.impossible-adversary-page .faq-a p:last-of-type { margin-bottom: 10px; }
+
+.ia-faq-scripture {
+  font-size: clamp(0.78rem, 1.8vw, 0.85rem);
+  font-style: italic;
+  color: var(--stone);
+  border-left: 3px solid rgba(184,134,11,0.4);
+  padding-left: 12px;
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (min-width: 640px) {
+  .impossible-adversary-page .tab-nav-wrap::after { display: none; }
+}
+
+@media (min-width: 900px) {
+  .impossible-adversary-page .tab-nav { flex-wrap: wrap; overflow-x: visible; }
+}
+
+@media (max-width: 400px) {
+  .ia-pillar-grid,
+  .ia-triple-grid,
+  .ia-judgment-grid,
+  .ia-temptation-grid { grid-template-columns: 1fr; }
+  .ia-next-section { text-align: center; }
+  .ia-next-section-btn { text-align: center; }
+}

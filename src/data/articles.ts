@@ -32,6 +32,17 @@ const articles: Article[] = [
     description:
       'A careful examination of the astronomical, calendrical, and historical evidence for the date of the crucifixion.',
   },
+  {
+    id: 'impossible-adversary',
+    order: 3,
+    href: '/impossible-adversary',
+    isRoute: true,
+    navLabel: 'The Impossible Adversary',
+    label: 'Theological Thesis',
+    title: 'The Impossible Adversary',
+    description:
+      'A four-pillar argument from Scripture showing why the Nature and Character of God make a literal Satan and a fallen angelic order theologically impossible.',
+  },
   // {
   //   id: 'test',
   //   order: 3,
