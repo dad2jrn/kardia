@@ -533,11 +533,92 @@
   color: var(--ink-light);
 }
 
-/* ── FAQ TAB ───────────────────────────────────────── */
-.cd-faq-card {
+/* ── SECTION CARD ─────────────────────────────────── */
+.cd-section-card {
   background: linear-gradient(160deg, var(--parchment) 0%, var(--parchment-dark) 100%);
   border-radius: 4px;
-  padding: 28px 32px;
+  overflow: hidden;
   box-shadow: 0 6px 30px rgba(0,0,0,0.5);
+  margin-bottom: 28px;
 }
+
+.cd-section-header {
+  padding: clamp(14px, 3vw, 22px) clamp(16px, 4vw, 30px);
+  background: linear-gradient(135deg, #1a120a 0%, #0d0a06 100%);
+  border-bottom: 3px solid var(--gold);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.cd-section-num {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+  color: var(--gold);
+  opacity: 0.7;
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cd-section-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.72rem, 2.2vw, 1.02rem);
+  letter-spacing: clamp(0.04em, 0.5vw, 0.12em);
+  color: var(--parchment);
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.cd-section-body {
+  padding: clamp(18px, 4vw, 28px) clamp(16px, 4vw, 32px) clamp(20px, 4vw, 32px);
+}
+
+/* ── BODY TEXT ────────────────────────────────────── */
+.cd-body-p {
+  font-size: clamp(0.97rem, 2.2vw, 1.05rem);
+  line-height: 1.85;
+  color: var(--ink-light);
+  margin-bottom: 16px;
+}
+
+/* ── CROSS DIVIDER ────────────────────────────────── */
+.cd-cross-divider {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1rem;
+  margin: 18px 0;
+  opacity: 0.45;
+  letter-spacing: 0.5em;
+}
+
+/* ── CLOSING BOX ──────────────────────────────────── */
+.cd-closing-box {
+  background: linear-gradient(135deg, #1a120a, #0f0a04);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: clamp(20px, 5vw, 32px) clamp(16px, 5vw, 36px);
+  margin: 20px 0 0;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.7), inset 0 1px 0 rgba(184,134,11,0.2);
+  text-align: center;
+}
+
+.cd-closing-ornament {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.6rem, 1.5vw, 0.72rem);
+  letter-spacing: clamp(0.1em, 0.8vw, 0.35em);
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.cd-closing-body {
+  font-size: clamp(0.93rem, 2.1vw, 1.02rem);
+  line-height: 1.85;
+  color: var(--parchment);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ── FAQ TAB ───────────────────────────────────────── */
 

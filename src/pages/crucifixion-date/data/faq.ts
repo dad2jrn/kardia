@@ -10,7 +10,7 @@ export const faqItems: FaqItem[] = [
 Where it begins to matter is when you take prophecy seriously. If Daniel predicted the arrival of the Messiah down to a specific number of years, and if the apostolic church believed a 6,000-year framework was built into creation itself, then the year the Cross happened becomes the starting point of a clock. Get the starting point wrong and the clock reads wrong. So the question is not urgent for personal faith, but it is significant for anyone who wants to think carefully about the shape of history and where we might be in it.`,
   },
   {
-    question: "Why don't the Gospels just tell us what year it was?",
+    question: "Q: Why don't the Gospels just tell us what year it was?",
     answer: `Because the Gospels were not written as historical timelines — they were written as testimony. Matthew, Mark, Luke, and John were telling people who Jesus was and what he did, not compiling a date-stamped biography for future scholars. Their audiences already knew roughly when these things happened because they lived in the same world and the same generation.<br><br>
 Luke comes the closest to giving us a calendar anchor by mentioning the fifteenth year of the Emperor Tiberius (Luke 3:1) — but even that requires us to know which counting method Luke was using, and historians still debate it. The absence of an exact year in the Gospels is not a flaw or a cover-up. It simply reflects what kind of documents they are.`,
   },
