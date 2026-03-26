@@ -1,0 +1,357 @@
+/* ── PAGE LAYOUT ─────────────────────────────────── */
+.nature-of-god-page {
+  background: radial-gradient(ellipse at 50% 0%, #1a1208 0%, #090804 65%);
+  min-height: 100vh;
+  padding: 0 0 80px 0;
+}
+
+.ng-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* ── INTRO CARD ───────────────────────────────────── */
+.ng-intro-card {
+  background: linear-gradient(135deg, var(--parchment) 0%, var(--parchment-dark) 100%);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: clamp(16px, 4vw, 28px) clamp(16px, 5vw, 36px);
+  margin: 0 auto 48px;
+  max-width: 780px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.75;
+  text-align: center;
+}
+
+
+/* ── TAB NAV ──────────────────────────────────────── */
+.nature-of-god-page .tab-nav-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.nature-of-god-page .tab-toggle {
+  display: none;
+}
+
+.nature-of-god-page .tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-bottom: 2px solid var(--gold);
+}
+
+.nature-of-god-page .tab-btn {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  padding: 12px 20px;
+  background: transparent;
+  color: var(--stone);
+  border: 1px solid transparent;
+  border-bottom: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.nature-of-god-page .tab-btn:hover { color: var(--gold-light); }
+
+.nature-of-god-page .tab-btn.active {
+  color: var(--gold-bright);
+  background: rgba(184,134,11,0.12);
+  border-color: var(--gold);
+  border-bottom-color: #090804;
+  margin-bottom: -2px;
+}
+
+@media (max-width: 639px) {
+  .nature-of-god-page .tab-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(184,134,11,0.08);
+    border: 1px solid var(--gold);
+    border-bottom: none;
+    color: var(--gold-bright);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    cursor: pointer;
+  }
+
+  .nature-of-god-page .tab-toggle-arrow { transition: transform 0.2s; }
+  .nature-of-god-page .tab-nav-wrap.tab-open .tab-toggle-arrow { transform: rotate(180deg); }
+
+  .nature-of-god-page .tab-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(6, 4, 2, 0.98);
+    border: 1px solid var(--gold);
+    border-top: none;
+    justify-content: flex-start;
+  }
+
+  .nature-of-god-page .tab-nav-wrap.tab-open .tab-nav { display: flex; }
+
+  .nature-of-god-page .tab-btn {
+    border: none;
+    border-bottom: 1px solid rgba(184,134,11,0.2);
+    white-space: normal;
+    text-align: left;
+    padding: 12px 16px;
+    width: 100%;
+  }
+
+  .nature-of-god-page .tab-btn.active {
+    margin-bottom: 0;
+    border-color: transparent;
+    border-bottom: 1px solid rgba(184,134,11,0.2);
+  }
+}
+
+
+/* ── SECTION CARD ─────────────────────────────────── */
+.ng-section-card {
+  background: linear-gradient(160deg, var(--parchment) 0%, var(--parchment-dark) 100%);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.5);
+  margin-bottom: 28px;
+}
+
+.ng-section-header {
+  padding: clamp(14px, 3vw, 22px) clamp(16px, 4vw, 30px);
+  background: linear-gradient(135deg, #1a120a 0%, #0d0a06 100%);
+  border-bottom: 3px solid var(--gold);
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.ng-section-num {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  flex-shrink: 0;
+  min-width: 32px;
+}
+
+.ng-section-title {
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  color: var(--gold-light);
+  line-height: 1.3;
+}
+
+.ng-section-body {
+  padding: clamp(18px, 4vw, 28px) clamp(16px, 4vw, 32px) clamp(20px, 4vw, 32px);
+}
+
+
+/* ── BODY TEXT ────────────────────────────────────── */
+.ng-body-p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ink-light);
+  margin-bottom: 22px;
+}
+
+
+/* ── SCRIPTURE BOX ────────────────────────────────── */
+.ng-scripture-box {
+  background: linear-gradient(135deg, rgba(26,18,10,0.9), rgba(15,10,4,0.95));
+  border-left: 3px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  padding: 18px 24px;
+  margin: 24px 0;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.ng-scripture-ref {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.ng-scripture-text {
+  font-style: italic;
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: var(--parchment);
+}
+
+
+/* ── PULL QUOTE ───────────────────────────────────── */
+.ng-pull-quote {
+  text-align: center;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-style: italic;
+  color: var(--gold-bright);
+  margin: 32px 0;
+  padding: 20px 32px;
+  border-top: 1px solid rgba(184,134,11,0.3);
+  border-bottom: 1px solid rgba(184,134,11,0.3);
+  line-height: 1.6;
+}
+
+
+/* ── MOVEMENT (subsection heading) ───────────────── */
+.ng-movement {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 36px 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(184,134,11,0.2);
+}
+
+
+/* ── CROSS DIVIDER ────────────────────────────────── */
+.ng-cross-divider {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1rem;
+  margin: 32px 0;
+  opacity: 0.5;
+  letter-spacing: 0.5em;
+}
+
+
+/* ── NEXT SECTION BUTTON ──────────────────────────── */
+.ng-next-section {
+  text-align: center;
+  margin: 48px 0 16px;
+}
+
+.ng-next-section-btn {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.ng-next-section-btn:hover {
+  background: rgba(184,134,11,0.12);
+  color: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+
+
+/* ── CLOSING BOX ──────────────────────────────────── */
+.ng-closing-box {
+  background: linear-gradient(135deg, rgba(26,18,10,0.95), rgba(15,10,4,0.98));
+  border: 1px solid rgba(184,134,11,0.45);
+  border-radius: 4px;
+  padding: 36px 40px;
+  margin: 40px 0 24px;
+  text-align: center;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(184,134,11,0.15);
+}
+
+.ng-closing-ornament {
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.ng-closing-statement {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: var(--gold-bright);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-style: italic;
+  text-shadow: 0 0 20px rgba(240,192,64,0.3);
+}
+
+.ng-closing-body {
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: var(--parchment-dark);
+  opacity: 0.9;
+}
+
+
+/* ── FRAMEWORK CHAIN (Section III) ───────────────── */
+.ng-framework-chain {
+  display: flex;
+  flex-direction: column;
+  margin: 28px 0;
+  gap: 4px;
+}
+
+.ng-fw-step {
+  background: linear-gradient(135deg, rgba(26,18,10,0.8), rgba(15,10,4,0.9));
+  border: 1px solid rgba(184,134,11,0.2);
+  border-radius: 4px;
+  padding: 16px 22px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.ng-fw-step-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  min-width: 110px;
+  flex-shrink: 0;
+  padding-top: 3px;
+}
+
+.ng-fw-step-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--parchment-dark);
+}
+
+.ng-fw-connector {
+  padding-left: 24px;
+  color: var(--gold);
+  opacity: 0.35;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+
+/* ── DISTORTION LIST (Section II) ────────────────── */
+.ng-distortion-list {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ng-distortion-item {
+  background: linear-gradient(135deg, rgba(26,18,10,0.7), rgba(15,10,4,0.85));
+  border-left: 3px solid rgba(184,134,11,0.4);
+  border-radius: 0 4px 4px 0;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--parchment-dark);
+  font-style: italic;
+}

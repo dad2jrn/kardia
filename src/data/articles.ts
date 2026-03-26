@@ -11,6 +11,17 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    id: 'nature-of-god',
+    order: 0,
+    href: '/nature-of-god',
+    isRoute: true,
+    navLabel: 'The Foundation',
+    label: 'Foundational Theology',
+    title: 'The Ground Beneath Everything',
+    description:
+      'God\'s nature, character, and why it must come first. The foundational study that every other inquiry on this site rests upon.',
+  },
+  {
     id: 'holy-week',
     order: 1,
     href: '/holy-week',
