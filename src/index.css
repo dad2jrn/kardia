@@ -52,7 +52,7 @@ body {
 }
 .site-nav .nav-brand {
   color: var(--gold-bright);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-decoration: none;
   letter-spacing: 0.15em;
 }
