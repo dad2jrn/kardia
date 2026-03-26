@@ -1,4 +1,5 @@
 import { SectionCard, ScriptureBox, Movement, AnchorList, NextSectionButton } from '../components'
+import VerseRef from '../../../components/VerseRef'
 
 export default function Section7({ onNext }: { onNext: () => void }) {
   return (
@@ -7,7 +8,7 @@ export default function Section7({ onNext }: { onNext: () => void }) {
 
       <p className="hw-body-p">We need to be honest about something. There is an objection to everything we have said so far — and it is not a stupid objection. It is actually a pretty reasonable one.</p>
 
-      <p className="hw-body-p">Peter recorded it in 2 Peter 3:3–4. The scoffers said: "Where is this 'coming' he promised? Ever since our ancestors died, everything goes on as it has since the beginning of creation." And they have a point. Jesus told His disciples to watch for wars, famines, earthquakes, false prophets, persecution, and moral decay. Every single one of those things has been present in every generation since He said it.</p>
+      <p className="hw-body-p">Peter recorded it in <VerseRef passage="2 Peter 3:3–4">2 Peter 3:3–4</VerseRef>. The scoffers said: "Where is this 'coming' he promised? Ever since our ancestors died, everything goes on as it has since the beginning of creation." And they have a point. Jesus told His disciples to watch for wars, famines, earthquakes, false prophets, persecution, and moral decay. Every single one of those things has been present in every generation since He said it.</p>
 
       <p className="hw-body-p">So the honest question is: if the signs have always been there, how do you tell the difference between the generation that is actually at the end and every other generation that thought it was?</p>
 
@@ -64,7 +65,9 @@ export default function Section7({ onNext }: { onNext: () => void }) {
         "I am going to make Jerusalem a cup that sends all the surrounding peoples reeling... On that day, when all the nations of the earth are gathered against her, I will make Jerusalem an immovable rock for all the nations."
       </ScriptureBox>
 
-      <AnchorList refs="2 Peter 3:3–9 &nbsp;·&nbsp; Matthew 24:6–8 &nbsp;·&nbsp; 1 Thessalonians 5:3 &nbsp;·&nbsp; Ezekiel 37:21–22 &nbsp;·&nbsp; Luke 21:24 &nbsp;·&nbsp; Zechariah 12:2–3" />
+      <AnchorList refs={<>
+        <VerseRef passage="2 Peter 3:3–9" /> · <VerseRef passage="Matthew 24:6–8" /> · <VerseRef passage="1 Thessalonians 5:3" /> · <VerseRef passage="Ezekiel 37:21–22" /> · <VerseRef passage="Luke 21:24" /> · <VerseRef passage="Zechariah 12:2–3" />
+      </>} />
 
       <NextSectionButton label="Section 8: What This Means For You Today" onClick={onNext} />
     </SectionCard>

@@ -1,4 +1,5 @@
 import { SectionCard, ScriptureBox, Movement, PatristicBox, NextSectionButton } from '../components'
+import VerseRef from '../../../components/VerseRef'
 
 const clockDays = [
   { num: '1', label: 'Day One\n~1,000 yrs', state: 'past' },
@@ -17,7 +18,7 @@ export default function Section4({ onNext }: { onNext: () => void }) {
     <SectionCard num="IV" title="The Earliest Christians Already Knew This">
       <Movement>Movement 1 — It Was Already in the Jewish Air</Movement>
 
-      <p className="hw-body-p">Peter was not introducing a brand new idea when he wrote 2 Peter 3:8. He was reminding his readers of something already deeply embedded in the Jewish world they all lived in.</p>
+      <p className="hw-body-p">Peter was not introducing a brand new idea when he wrote <VerseRef passage="2 Peter 3:8">2 Peter 3:8</VerseRef>. He was reminding his readers of something already deeply embedded in the Jewish world they all lived in.</p>
 
       <p className="hw-body-p">The Talmud — the ancient collection of Jewish teaching and tradition — contains a document called <em>Sanhedrin 97a</em>. It records a tradition held by the rabbis that had been circulating for a very long time: the world as we know it would last six thousand years, followed by a Messianic age of rest. The rabbis called it "the world to come" — a thousand-year Sabbath era when the Messiah would reign.</p>
 

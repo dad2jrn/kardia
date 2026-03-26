@@ -2,6 +2,7 @@ import {
   SectionCard, ScriptureBox, Movement,
   JudgmentCard, ChallengeBox, AnchorList, NextSectionButton,
 } from '../components'
+import VerseRef from '../../../components/VerseRef'
 
 interface Props { onNext: () => void }
 
@@ -56,7 +57,9 @@ export default function PillarIII({ onNext }: Props) {
         If God destroyed every human being on the antediluvian earth — because their corruption passed the threshold His Nature permits to continue — what possible theological justification exists for preserving a class of angelic beings whose corruption is greater in magnitude, longer in duration, and wider in destructive reach than anything the antediluvian world produced? The God who closed the ark door would not then preserve Satan in active, empowered rebellion for the entirety of human history. It is not merely unlikely. It is a direct contradiction of the governing principle God Himself established.
       </ChallengeBox>
 
-      <AnchorList refs="Genesis 6:5–7 &nbsp;·&nbsp; Genesis 18–19 &nbsp;·&nbsp; 2 Peter 2:6 &nbsp;·&nbsp; 2 Peter 3:6–7 &nbsp;·&nbsp; Revelation 20:14 — &ldquo;the lake of fire is the second death&rdquo;" />
+      <AnchorList refs={<>
+        <VerseRef passage="Genesis 6:5–7" /> · <VerseRef passage="Genesis 18–19" /> · <VerseRef passage="2 Peter 2:6" /> · <VerseRef passage="2 Peter 3:6–7" /> · <VerseRef passage="Revelation 20:14" />{' — "the lake of fire is the second death"'}
+      </>} />
 
       <NextSectionButton label="Pillar IV: The Christological Confirmation →" onClick={onNext} />
     </SectionCard>

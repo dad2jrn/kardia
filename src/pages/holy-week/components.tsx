@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import VerseRef from '../../components/VerseRef'
 
 /* ── SectionCard ─────────────────────────────────── */
 interface SectionCardProps {
@@ -24,9 +25,17 @@ interface ScriptureBoxProps {
   children: ReactNode
 }
 export function ScriptureBox({ ref_, children }: ScriptureBoxProps) {
+  const parts = ref_.split(' · ')
   return (
     <div className="hw-scripture-box">
-      <div className="hw-scripture-ref">{ref_}</div>
+      <div className="hw-scripture-ref">
+        {parts.map((part, i) => (
+          <span key={part}>
+            {i > 0 && ' · '}
+            <VerseRef passage={part.trim()} />
+          </span>
+        ))}
+      </div>
       <div className="hw-scripture-text">{children}</div>
     </div>
   )
@@ -48,11 +57,11 @@ export function CrossDivider() {
 }
 
 /* ── AnchorList ──────────────────────────────────── */
-export function AnchorList({ refs }: { refs: string }) {
+export function AnchorList({ refs }: { refs: ReactNode }) {
   return (
     <div className="hw-anchor-list">
       <div className="hw-anchor-title">Scripture Anchors</div>
-      <div className="hw-anchor-refs" dangerouslySetInnerHTML={{ __html: refs }} />
+      <div className="hw-anchor-refs">{refs}</div>
     </div>
   )
 }

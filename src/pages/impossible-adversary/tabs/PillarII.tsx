@@ -2,6 +2,7 @@ import {
   SectionCard, ScriptureBox, Movement,
   TripleCard, PatristicBox, AnchorList, NextSectionButton,
 } from '../components'
+import VerseRef from '../../../components/VerseRef'
 
 interface Props { onNext: () => void }
 
@@ -74,7 +75,9 @@ export default function PillarII({ onNext }: Props) {
 
       <p className="ia-body-p">Augustine believed he was describing his own spiritual biography. He was describing the mercy of Genesis 3. The restlessness is not a malfunction. It is the purposeful mercy of a God who will not allow His creation to find permanent rest in that which destroys it.</p>
 
-      <AnchorList refs="Genesis 3:1–19 &nbsp;·&nbsp; Numbers 22:28–30 &nbsp;·&nbsp; James 1:14–15 &nbsp;·&nbsp; Micah 7:17 &nbsp;·&nbsp; Genesis 3:22 — the Tree of Life and the mercy of mortality" />
+      <AnchorList refs={<>
+        <VerseRef passage="Genesis 3:1–19" /> · <VerseRef passage="Numbers 22:28–30" /> · <VerseRef passage="James 1:14–15" /> · <VerseRef passage="Micah 7:17" /> · <VerseRef passage="Genesis 3:22">{' Genesis 3:22'}</VerseRef>{' — the Tree of Life and the mercy of mortality'}
+      </>} />
 
       <NextSectionButton label="Pillar III: The Pattern of Divine Judgment →" onClick={onNext} />
     </SectionCard>

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import VerseRef from '../../components/VerseRef'
 
 /* ── SectionCard ─────────────────────────────────── */
 interface SectionCardProps {
@@ -24,9 +25,17 @@ interface ScriptureBoxProps {
   children: ReactNode
 }
 export function ScriptureBox({ ref_, children }: ScriptureBoxProps) {
+  const parts = ref_.split(' · ')
   return (
     <div className="ng-scripture-box">
-      <div className="ng-scripture-ref">{ref_}</div>
+      <div className="ng-scripture-ref">
+        {parts.map((part, i) => (
+          <span key={part}>
+            {i > 0 && ' · '}
+            <VerseRef passage={part.trim()} />
+          </span>
+        ))}
+      </div>
       <div className="ng-scripture-text">{children}</div>
     </div>
   )

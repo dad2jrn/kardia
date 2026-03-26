@@ -1,4 +1,5 @@
 import { SectionCard, ScriptureBox, PullQuote, AnchorList, ClosingBox, NextSectionButton } from '../components'
+import VerseRef from '../../../components/VerseRef'
 
 export default function Section8({ onNext }: { onNext: () => void }) {
   return (
@@ -45,7 +46,9 @@ export default function Section8({ onNext }: { onNext: () => void }) {
         "He who was seated on the throne said, 'I am making everything new!' Then he said, 'Write this down, for these words are trustworthy and true.'"
       </ScriptureBox>
 
-      <AnchorList refs="Romans 13:11–12 &nbsp;·&nbsp; 1 Thessalonians 5:4–6 &nbsp;·&nbsp; 2 Peter 3:9 &nbsp;·&nbsp; Revelation 21:5" />
+      <AnchorList refs={<>
+        <VerseRef passage="Romans 13:11–12" /> · <VerseRef passage="1 Thessalonians 5:4–6" /> · <VerseRef passage="2 Peter 3:9" /> · <VerseRef passage="Revelation 21:5" />
+      </>} />
 
       <NextSectionButton label="Frequently Asked Questions" onClick={onNext} />
     </SectionCard>

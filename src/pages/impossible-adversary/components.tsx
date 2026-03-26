@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import VerseRef from '../../components/VerseRef'
 
 // ── SectionCard ───────────────────────────────────────────
 interface SectionCardProps { num: string; title: string; children: ReactNode }
@@ -17,9 +18,17 @@ export function SectionCard({ num, title, children }: SectionCardProps) {
 // ── ScriptureBox ──────────────────────────────────────────
 interface ScriptureBoxProps { ref_: string; children: ReactNode }
 export function ScriptureBox({ ref_, children }: ScriptureBoxProps) {
+  const parts = ref_.split(' · ')
   return (
     <div className="ia-scripture-box">
-      <div className="ia-scripture-ref">{ref_}</div>
+      <div className="ia-scripture-ref">
+        {parts.map((part, i) => (
+          <span key={part}>
+            {i > 0 && ' · '}
+            <VerseRef passage={part.trim()} />
+          </span>
+        ))}
+      </div>
       <div className="ia-scripture-text">{children}</div>
     </div>
   )
@@ -41,12 +50,12 @@ export function CrossDivider() {
 }
 
 // ── AnchorList ────────────────────────────────────────────
-interface AnchorListProps { refs: string }
+interface AnchorListProps { refs: ReactNode }
 export function AnchorList({ refs }: AnchorListProps) {
   return (
     <div className="ia-anchor-list">
       <div className="ia-anchor-title">Key Texts</div>
-      <div className="ia-anchor-refs" dangerouslySetInnerHTML={{ __html: refs }} />
+      <div className="ia-anchor-refs">{refs}</div>
     </div>
   )
 }
@@ -144,7 +153,7 @@ export function TemptationCard({ name, subtext, temptation, parallel }: Temptati
     <div className="ia-temptation-card">
       <div className="ia-temptation-header">
         <div className="ia-temptation-name">{name}</div>
-        <div className="ia-temptation-subtext">{subtext}</div>
+        <div className="ia-temptation-subtext"><VerseRef passage={subtext} /></div>
       </div>
       <div className="ia-temptation-body">
         <div className="ia-temptation-row">

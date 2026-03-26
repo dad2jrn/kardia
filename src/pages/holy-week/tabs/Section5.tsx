@@ -1,4 +1,5 @@
 import { SectionCard, ScriptureBox, Movement, AnchorList, NextSectionButton } from '../components'
+import VerseRef from '../../../components/VerseRef'
 
 const epochs = [
   { era: 'Era One', span: 'Adam → Abraham', days: '~2,000 years · Days 1–2', highlight: false },
@@ -98,7 +99,9 @@ export default function Section5({ onNext }: { onNext: () => void }) {
 
       <p className="hw-body-p">This is not date-setting. We are not circling a day on the calendar and telling you to sell your house. We are reading the clock that Peter told us to read. And what that clock says is: we are very close to the end of the sixth day. The window the evidence establishes is <strong>fall 2030 at the earliest, fall 2033 as the more precisely grounded anchor.</strong></p>
 
-      <AnchorList refs="Matthew 1:17 &nbsp;·&nbsp; Hosea 6:1–2 &nbsp;·&nbsp; Jeremiah 31:31–34 &nbsp;·&nbsp; Hebrews 8:8–12 &nbsp;·&nbsp; John 2:19–21 &nbsp;·&nbsp; Luke 13:32 &nbsp;·&nbsp; John 2:13; 6:4; 11:55 (three Passovers establishing ministry length)" />
+      <AnchorList refs={<>
+        <VerseRef passage="Matthew 1:17" /> · <VerseRef passage="Hosea 6:1–2" /> · <VerseRef passage="Jeremiah 31:31–34" /> · <VerseRef passage="Hebrews 8:8–12" /> · <VerseRef passage="John 2:19–21" /> · <VerseRef passage="Luke 13:32" /> · <VerseRef passage="John 2:13" /> · <VerseRef passage="John 6:4" /> · <VerseRef passage="John 11:55" />{' (three Passovers establishing ministry length)'}
+      </>} />
 
       <NextSectionButton label="Section 6: The Feast Calendar — God's Prophetic Timepiece" onClick={onNext} />
     </SectionCard>

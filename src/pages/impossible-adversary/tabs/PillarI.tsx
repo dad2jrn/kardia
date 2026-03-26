@@ -2,6 +2,7 @@ import {
   SectionCard, ScriptureBox, PullQuote, Movement,
   ChallengeBox, AnchorList, NextSectionButton,
 } from '../components'
+import VerseRef from '../../../components/VerseRef'
 
 interface Props { onNext: () => void }
 
@@ -40,7 +41,9 @@ export default function PillarI({ onNext }: Props) {
 
       <p className="ia-body-p">God's Nature does not permit this. A God whose Nature is the ontological ground of all holiness, love, and sovereignty cannot also be a God who voluntarily sustains in empowered existence a being dedicated to the inversion of everything He is. These are not in tension. They are mutually exclusive.</p>
 
-      <AnchorList refs="1 John 1:5 &nbsp;·&nbsp; Genesis 3:22–24 &nbsp;·&nbsp; 2 Timothy 2:13 — &ldquo;He cannot deny himself.&rdquo; &nbsp;·&nbsp; James 1:13 — &ldquo;God cannot be tempted by evil, nor does he tempt anyone.&rdquo;" />
+      <AnchorList refs={<>
+        <VerseRef passage="1 John 1:5" /> · <VerseRef passage="Genesis 3:22–24" /> · <VerseRef passage="2 Timothy 2:13" />{' — "He cannot deny himself." · '}<VerseRef passage="James 1:13" />{' — "God cannot be tempted by evil, nor does he tempt anyone."'}
+      </>} />
 
       <NextSectionButton label="Pillar II: Genesis 3 and the Nachash →" onClick={onNext} />
     </SectionCard>

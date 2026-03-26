@@ -1,4 +1,5 @@
 import { SectionCard, ScriptureBox, Movement, AnchorList, NextSectionButton } from '../components'
+import VerseRef from '../../../components/VerseRef'
 
 const feasts = [
   { season: 'spring', name: 'Passover', hebrew: 'Pesach', status: 'fulfilled', desc: 'Commemorated the night God delivered Israel from Egypt by the blood of a lamb. Jesus — the Passover Lamb — was crucified on the exact day of Passover, at the very hour the lambs were being slaughtered in the temple. <em>(1 Cor 5:7; John 19:14)</em>' },
@@ -91,7 +92,9 @@ export default function Section6({ onNext }: { onNext: () => void }) {
 
       <p className="hw-body-p">The feast calendar is not a religious tradition that runs alongside the gospel story. It is the prophetic timetable of the gospel story itself — authored by the same God from the same eternal purpose, running from Moses to the New Creation without a single missed appointment.</p>
 
-      <AnchorList refs="1 Corinthians 5:7 &nbsp;·&nbsp; Leviticus 23:10–11 &nbsp;·&nbsp; Acts 2:1–4 &nbsp;·&nbsp; John 19:14 &nbsp;·&nbsp; Matthew 24:36 &nbsp;·&nbsp; 1 Thessalonians 4:16 &nbsp;·&nbsp; 1 Corinthians 15:52 &nbsp;·&nbsp; Revelation 11:3, 11–15 &nbsp;·&nbsp; Zechariah 14:16–17 &nbsp;·&nbsp; Revelation 21:3 &nbsp;·&nbsp; Leviticus 23:23–44" />
+      <AnchorList refs={<>
+        <VerseRef passage="1 Corinthians 5:7" /> · <VerseRef passage="Leviticus 23:10–11" /> · <VerseRef passage="Acts 2:1–4" /> · <VerseRef passage="John 19:14" /> · <VerseRef passage="Matthew 24:36" /> · <VerseRef passage="1 Thessalonians 4:16" /> · <VerseRef passage="1 Corinthians 15:52" /> · <VerseRef passage="Revelation 11:3" /> · <VerseRef passage="Zechariah 14:16–17" /> · <VerseRef passage="Revelation 21:3" /> · <VerseRef passage="Leviticus 23:23–44" />
+      </>} />
 
       <NextSectionButton label="Section 7: The Scoffers Had a Point" onClick={onNext} />
     </SectionCard>

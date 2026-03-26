@@ -2,6 +2,7 @@ import {
   SectionCard, ScriptureBox, PullQuote, Movement,
   TemptationCard, AnchorList, NextSectionButton,
 } from '../components'
+import VerseRef from '../../../components/VerseRef'
 
 interface Props { onNext: () => void }
 
@@ -55,7 +56,9 @@ export default function PillarIV({ onNext }: Props) {
 
       <p className="ia-body-p">Only after this test was complete could the ministry begin. The second Adam had to face and defeat what the first Adam faced and surrendered to. The parallel is exact. The structure is intact. The implication is clear: the <em>satan</em> of the wilderness was the same adversary the <em>nachash</em> represented in Genesis 3 — the interior human impulse toward self-deification, concentrated and confronted in the human nature of the Son of God.</p>
 
-      <AnchorList refs="Romans 5:12–21 &nbsp;·&nbsp; 1 Corinthians 15:45–49 &nbsp;·&nbsp; Matthew 4:1–11 &nbsp;·&nbsp; Hebrews 4:15 &nbsp;·&nbsp; Hebrews 5:8–9 — &ldquo;he learned obedience through what he suffered&rdquo;" />
+      <AnchorList refs={<>
+        <VerseRef passage="Romans 5:12–21" /> · <VerseRef passage="1 Corinthians 15:45–49" /> · <VerseRef passage="Matthew 4:1–11" /> · <VerseRef passage="Hebrews 4:15" /> · <VerseRef passage="Hebrews 5:8–9" />{' — "he learned obedience through what he suffered"'}
+      </>} />
 
       <NextSectionButton label="Conclusion →" onClick={onNext} />
     </SectionCard>
