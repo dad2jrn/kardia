@@ -7,7 +7,7 @@ const clockDays = [
   { num: '3', label: 'Day Three\n~1,000 yrs', state: 'past' },
   { num: '4', label: 'Day Four\n~1,000 yrs', state: 'past' },
   { num: '5', label: 'Day Five\n~1,000 yrs', state: 'past' },
-  { num: '6', label: 'Day Six\n← We Are Here', state: 'now' },
+  { num: '6', label: 'Day Six\nWe Are Here', state: 'now' },
   { num: '7', label: 'Sabbath\nThe Millennium', state: 'future' },
 ]
 
@@ -26,7 +26,7 @@ export default function Section4({ onNext }: { onNext: () => void }) {
         "The world will exist for six thousand years — two thousand years of chaos, two thousand years of Torah, and two thousand years of the Messianic era."
       </PatristicBox>
 
-      <p className="hw-body-p">This was not a fringe idea held by a few eccentric scholars. It was mainstream Jewish theological expectation. The people Peter was writing to — many of whom came from a Jewish background — would have heard 2 Peter 3:8 and recognized it immediately. Peter wasn't building a new framework from scratch. He was saying: <em>the framework you already carry in your bones tells you exactly what you need to know about the timing of Christ's return.</em></p>
+      <p className="hw-body-p">This was not a fringe idea held by a few eccentric scholars. It was mainstream Jewish theological expectation. The people Peter was writing to — many of whom came from a Jewish background — would have heard <VerseRef passage="2 Peter 3:8">2 Peter 3:8</VerseRef> and recognized it immediately. Peter wasn't building a new framework from scratch. He was saying: <em>the framework you already carry in your bones tells you exactly what you need to know about the timing of Christ's return.</em></p>
 
       <Movement>Movement 2 — A Man Who Learned from Someone Who Knew John</Movement>
 

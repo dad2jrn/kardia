@@ -396,16 +396,16 @@
 }
 
 .hw-chain-node {
-  font-size: 0.88rem;
+  font-size: 1.25rem;
   letter-spacing: 0.1em;
   color: var(--gold-light);
   padding: 4px 12px;
 }
 
 .hw-chain-arrow {
-  color: var(--gold);
+  color: #1f1e1d;
   opacity: 0.6;
-  font-size: 0.85rem;
+  font-size: 1.25rem;
 }
 
 /* ── WEEK CLOCK (Section 4) ───────────────────────── */
@@ -439,12 +439,13 @@
 .hw-clock-now {
   background: rgba(184,134,11,0.15);
   border-color: var(--gold);
-  color: var(--gold-bright);
+  color: var(--gold);
+  font-weight: bold;
 }
 
 .hw-clock-future {
   background: rgba(26,18,10,0.3);
-  color: rgba(138,122,106,0.5);
+  color: #030303ba;
   border-style: dashed;
 }
 
