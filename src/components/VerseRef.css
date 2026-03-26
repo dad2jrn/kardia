@@ -1,0 +1,58 @@
+/* ── VerseRef inline trigger ──────────────────────────── */
+.verse-ref {
+  color: var(--gold-light);
+  border-bottom: 1px dotted var(--gold);
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  font-style: inherit;
+}
+
+/* ── Popover container ────────────────────────────────── */
+.verse-popover {
+  position: fixed;
+  z-index: 9999;
+  width: min(420px, 90vw);
+  background: linear-gradient(135deg, #1e1608 0%, #120e05 100%);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  padding: 16px 20px 14px;
+  pointer-events: none;
+}
+
+.verse-popover-ref {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.verse-popover-text {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--parchment);
+  font-style: italic;
+}
+
+.verse-popover-copyright {
+  font-size: 0.68rem;
+  color: var(--stone);
+  margin-top: 10px;
+  text-align: right;
+  letter-spacing: 0.03em;
+}
+
+.verse-popover-loading {
+  font-size: 0.85rem;
+  color: var(--stone);
+  font-style: italic;
+}
+
+.verse-popover-error {
+  font-size: 0.85rem;
+  color: var(--crimson-light);
+  font-style: italic;
+}
