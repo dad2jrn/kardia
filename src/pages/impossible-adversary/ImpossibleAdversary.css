@@ -490,14 +490,14 @@
   font-family: 'Cinzel', serif;
   font-size: clamp(0.6rem, 1.5vw, 0.68rem);
   letter-spacing: 0.2em;
-  color: var(--gold);
+  color: var(--gold-light);
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
 .ia-anchor-refs {
   font-size: clamp(0.8rem, 1.9vw, 0.88rem);
-  color: var(--stone);
+  color: var(--parchment-dark);
   font-style: italic;
   line-height: 1.8;
 }

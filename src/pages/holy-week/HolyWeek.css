@@ -229,22 +229,22 @@
 .hw-anchor-list {
   margin: 40px 0 24px;
   padding: 16px 20px;
-  border: 1px solid rgba(184,134,11,0.2);
+  border: 1px solid rgba(184,134,11,0.35);
   border-radius: 4px;
-  background: rgba(26,18,10,0.4);
+  background: rgba(18,14,5,0.85);
 }
 
 .hw-anchor-title {
   font-size: 0.65rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-light);
   margin-bottom: 8px;
 }
 
 .hw-anchor-refs {
   font-size: 0.88rem;
-  color: var(--stone);
+  color: var(--parchment-dark);
   line-height: 1.7;
 }
 
