@@ -56,11 +56,10 @@ export default function VerseRef({ passage, children }: VerseRefProps) {
     if (!el) return
 
     const rect = el.getBoundingClientRect()
-    const spaceBelow = window.innerHeight - rect.bottom
-    const above = spaceBelow < 180
+    const above = rect.bottom > window.innerHeight * 0.75
     setPos({
       top: above ? rect.top - 8 : rect.bottom + 8,
-      left: Math.min(rect.left, window.innerWidth - 440),
+      left: Math.min(rect.left, window.innerWidth - 545),
       above,
     })
 

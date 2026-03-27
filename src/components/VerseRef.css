@@ -12,7 +12,7 @@
 .verse-popover {
   position: fixed;
   z-index: 9999;
-  width: min(420px, 90vw);
+  width: min(525px, 90vw);
   background: linear-gradient(135deg, #1e1608 0%, #120e05 100%);
   border: 1px solid var(--gold);
   border-radius: 4px;
