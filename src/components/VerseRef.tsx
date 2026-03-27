@@ -96,7 +96,7 @@ export default function VerseRef({ passage, children }: VerseRefProps) {
         {state === 'ready' && (
           <>
             <div className="verse-popover-text">{text}</div>
-            <div className="verse-popover-copyright">ESV</div>
+            <div className="verse-popover-copyright">Source: ESV.org</div>
           </>
         )}
       </div>,
