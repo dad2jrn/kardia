@@ -11,7 +11,7 @@ export default function Section1({ onNext }: { onNext: () => void }) {
 
       <p className="ng-body-p">That is not a faith problem. That is a foundation problem. And the foundation can be fixed.</p>
 
-      <p className="ng-body-p">This paper is not an invitation to a softer God or a more comfortable theology. It is an invitation back to the real one. The God of Abraham, Isaac, and Jacob. The God made visible in Jesus of Nazareth. The God whose nature is the ground of all reality and whose character is the measure of all goodness. If you have been carrying a version of God that exhausts you, this is for you.</p>
+      <p className="ng-body-p">This study is not an invitation to a softer God or a more comfortable theology. It is an invitation back to the real one. The God of Abraham, Isaac, and Jacob. The God made visible in Jesus of Nazareth. The God whose nature is the ground of all reality and whose character is the measure of all goodness. If you have been carrying a version of God that exhausts you, this is for you.</p>
 
       <NextSectionButton label="Section II: The Problem" onClick={onNext} />
     </SectionCard>

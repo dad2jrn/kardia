@@ -18,7 +18,7 @@ export default function Section2({ onNext }: { onNext: () => void }) {
 
       <p className="ng-body-p">The result is a specific kind of Christian who is theologically sincere but spiritually exhausted. They intellectually affirm that God is good. They can quote the verse. But emotionally they brace for His disappointment. They measure their spiritual health by how well they have managed their sin count this week. They approach prayer like a performance review. They love God — but from a careful, managed distance.</p>
 
-      <PullQuote>That dissonance is the wound this paper is trying to heal. The corrective is not a softer God. It is a properly ordered one.</PullQuote>
+      <PullQuote>That dissonance is the wound this study is trying to heal. The corrective is not a softer God. It is a properly ordered one.</PullQuote>
 
       <p className="ng-body-p">And the order begins with His nature.</p>
 

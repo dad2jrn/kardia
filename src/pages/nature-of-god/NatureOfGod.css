@@ -211,7 +211,7 @@
 
 /* ── MOVEMENT (subsection heading) ───────────────── */
 .ng-movement {
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
@@ -329,10 +329,11 @@
 }
 
 .ng-fw-connector {
-  padding-left: 24px;
+  /* padding-left: 24px; */
+  text-align: center;
   color: var(--gold);
-  opacity: 0.35;
-  font-size: 0.85rem;
+  opacity: 0.75;
+  font-size: 1.25rem;
   line-height: 1;
 }
 
