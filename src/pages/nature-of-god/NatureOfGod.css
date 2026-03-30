@@ -206,6 +206,7 @@
   border-top: 1px solid rgba(184,134,11,0.3);
   border-bottom: 1px solid rgba(184,134,11,0.3);
   line-height: 1.6;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.18);
 }
 
 
